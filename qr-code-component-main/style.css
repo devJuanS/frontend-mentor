@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    /* Colors */
+    --normal-weight: 400;
+    --bold-weight: 700;
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+body {
+    /* Typography styles */
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: var(--normal-weight);
+    /* Visualization styles */
+    background-color: var(--light-gray);
+}
+
+/* ++++ MAIN ++++ */
+main {
+    /* Box model styles */
+    height: calc(100vh - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-card {
+    /* Box model styles */
+    width: 335px;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+    /* Visualization styles */
+    border-radius: 20px;
+    background-color: var(--white);
+}
+
+.qr-card__img {
+    /* Box model styles */
+    width: 100%;
+    height: 60%;
+    /* Visualization styles */
+    border-radius: 12px;
+    /* Others styles */
+    background-image: url('/images/image-qr-code.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.qr-card h1 {
+    /* Box model styles */
+    margin: 28px 14px 20px;
+    /* Typography styles */
+    font-size: 2.4rem;
+    font-weight: var(--bold-weight);
+    color: var(--dark-blue);
+}
+
+.qr-card p {
+    /* Box model styles */
+    margin: 0 14px;
+    /* Typography styles */
+    color: var(--grayish-blue);
+}
+
+/* ++++ FOOTER ++++ */
+.attribution { 
+    font-size: 1.1rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
