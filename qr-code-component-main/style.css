@@ -51,7 +51,7 @@ main {
     /* Visualization styles */
     border-radius: 12px;
     /* Others styles */
-    background-image: url('/images/image-qr-code.png');
+    background-image: url('images/image-qr-code.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
