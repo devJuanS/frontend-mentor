@@ -35,9 +35,10 @@ main {
 
 .qr-card {
     /* Box model styles */
-    width: 335px;
+    width: 332px;
     height: 500px;
-    padding: 20px;
+    margin-top: 20px;
+    padding: 16px;
     text-align: center;
     /* Visualization styles */
     border-radius: 20px;
@@ -74,6 +75,9 @@ main {
 }
 
 /* ++++ FOOTER ++++ */
+footer {
+    height: 20px;
+}
 .attribution { 
     font-size: 1.1rem; 
     text-align: center; 
