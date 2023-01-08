@@ -7,17 +7,46 @@
 :root {
     /* colors */
     /* ## primary ## */
-    --moderate-violet: hsl(263, 55%, 52%)
-    --very-dark-grayish-blue: hsl(217, 19%, 35%)
-    --very-dark-blackish-blue: hsl(219, 29%, 14%)
-    --white: hsl(0, 0%, 100%)
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
 
     /* ## neutral ## */
-    --light-gray: hsl(0, 0%, 81%)
-    --light-grayish-blue: hsl(210, 46%, 95%)
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    font-family:'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
 }
 
 
+.testimonial {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.testimonial-1 {
+    color: var(--white);
+    background-color: var(--moderate-violet);
+}
+
+
+.person-name {
+    font-size: 13px;
+}
+
+.person-title {
+    opacity: 50%;
+}
+
+.message {
+    opacity: 70%;
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
