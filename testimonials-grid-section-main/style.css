@@ -5,6 +5,7 @@
 }
 
 :root {
+    font-size: 62.5%;
     /* colors */
     /* ## primary ## */
     --moderate-violet: hsl(263, 55%, 52%);
@@ -26,26 +27,57 @@ body {
 
 .testimonial {
     margin: 20px;
-    padding: 20px;
+    padding: 24px 54px 20px 32px;
+    font-size: 1.3rem;
     border-radius: 12px;
 }
 
 .testimonial-1 {
-    color: var(--white);
+    color: var(--light-gray);
     background-color: var(--moderate-violet);
 }
 
+.testimonial-2 {
+    color: var(--light-gray);
+    background-color: var(--very-dark-grayish-blue);
+}
 
-.person-name {
-    font-size: 13px;
+.testimonial-3 {
+    color: var(--very-dark-blackish-blue);
+    background-color: var(--white);
+}
+
+.testimonial-4 {
+    color: var(--light-gray);
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.testimonial-5 {
+    color: var(--very-dark-blackish-blue);
+    background-color: var(--white);
+}
+
+.testimonial-3 .title, .testimonial-5 .title {
+    color: var(--very-dark-blackish-blue);
+}
+
+.title {
+    margin-top: 20px;
+    color: var(--white);
+    font-size: 1.9rem;
+    line-height: 26px;
 }
 
 .person-title {
+    margin-top: 4px;
     opacity: 50%;
 }
 
 .message {
+    margin-top: 20px;
+    font-size: 1.3rem;
     opacity: 70%;
+    line-height: 20px;
 }
 
 
