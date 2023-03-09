@@ -48,6 +48,7 @@ h2 {
 }
 
 .testimonial-1 {
+    position: relative;
     color: var(--light-gray);
     background-color: var(--moderate-violet);
 }
@@ -120,11 +121,17 @@ h2 {
     background-image: url('./images/image-kira.jpg');
 }
 
+.student__name {
+    font-size: 1.6rem;
+}
+
 .student__title {
     opacity: 50%;
 }
 
 .testimonial__title {
+    position: relative;
+    z-index: 1;
     margin-top: 20px;
     color: var(--white);
 }
@@ -134,6 +141,16 @@ h2 {
     font-size: 1.3rem;
     opacity: 70%;
     line-height: 20px;
+}
+
+.quotation-img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 32px;
+    z-index: 0;
+    opacity: 70%;
 }
 
 .attribution {
@@ -151,6 +168,10 @@ h2 {
 
 
 @media screen and (min-width: 720px) {
+    h2 {
+        font-size: 2.3rem;
+    }
+
     .testimonial-1 {
         grid-area: 1 / 1 / 2 / 3;
     }
@@ -162,11 +183,15 @@ h2 {
     .testimonial-5 {
         grid-area: 4 / 1 / 5 / 3;
     }
+
+    .quotation-img {
+        right: 15%;
+    }
 }
 
 @media screen and (min-width: 960px) {
     .testimonials-container {
-        grid-template-columns: repeat(3, 268px);
+        grid-template-columns: repeat(3, 288px);
     }
 
     .testimonial-4 {
@@ -180,7 +205,7 @@ h2 {
 
 @media screen and (min-width: 1440px) {
     .testimonials-container {
-        grid-template-columns: repeat(4, 268px);
+        grid-template-columns: repeat(4, 288px);
     }
 
     .testimonial-1 {
