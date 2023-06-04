@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Hanken Grotesk', sans-serif;
+
+
+  /* Primary */
+  --red-light: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --light-slate-blue: rgb(120, 87, 255);
+  --light-royal-blue: rgb(46, 43, 233);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+main {
+  width: 375px;
+}
+
+.card-result {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--pale-blue);
+  background-color: var(--light-royal-blue);
+  background: linear-gradient(0deg, var(--light-royal-blue), var(--light-slate-blue));
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+}
+
+.card-result h2 {
+  margin-block-start: 24px;
+  margin-block-end: 12px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.card-result h3 {
+  margin-block-end: 24px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: hsla(221, 100%, 96%, .7);
+}
+
+.card-result-text {
+  width: 260px;
+  margin-block-end: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: hsla(221, 100%, 96%, .7);
+}
+
+.result-circle {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--violet-blue);
+  background: linear-gradient(0deg, hsla(241, 81%, 54%,.1), var(--violet-blue));
+  border-radius: 50%;
+}
+
+.result-circle strong {
+  font-size: 5.4rem;
+  font-weight: 800;
+}
+
+.result-circle p {
+  font-size: 1.5rem;
+  color: hsla(221, 100%, 96%, .5);
+}
+
+.card-body-detail {
+  width: 100%;
+  padding: 20px 32px;
+}
+
+.card-body-title {
+  margin-block-end: 28px;
+  font-size: 2.0rem;
+}
+
+.card-summary-list {
+  list-style-type: none;
+}
+
+.summary-component-box {
+  margin-block-end: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.component-name {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.component-results {
+  color: hsl(204, 7.5%, 60%);
+}
+
+.component-results strong {
+  color: var(--dark-gray-blue);
+}
+
+.component--red {
+  color: var(--red-light);
+  background-color: hsla(0, 100%, 67%, .08);
+}
+
+.component--yellow {
+  color: var(--orange-yellow);
+  background-color: hsla(39, 100%, 56%, .08);
+}
+
+.component--green {
+  color: var(--green-teal);
+  background-color: hsla(166, 100%, 37%, .08);
+}
+
+.component--blue {
+  color: var(--cobalt-blue);
+  background-color: hsla(234, 85%, 45%, .08);
+}
+
+.btn-action {
+  width: 100%;
+  margin-block-start: 12px;
+  margin-block-end: 12px;
+  padding: 16px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--dark-gray-blue);
+  border: none;
+  border-radius: 32px;
+}
+
+.btn-action:hover {
+  background: linear-gradient(0deg, var(--light-royal-blue), var(--light-slate-blue));
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 750px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  main {
+    width: 650px;
+    margin-block-end: 40px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 32px;
+    box-shadow: 20px 20px 50px rgb(17, 37, 212, .1);
+  }
+
+  .card-result {
+    justify-content: space-around;
+    border-radius: 32px;
+  }
+
+  .result-circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .result-circle strong {
+    font-size: 6.0rem;
+  }
+
+  .card-result-text {
+    width: 220px;
+  }
+}
