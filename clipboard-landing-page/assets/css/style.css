@@ -94,6 +94,7 @@ a:hover {
 }
 
 .btn {
+  position: relative;
   width: 100%;
   margin-block: 12px;
   padding-block: 16px;
@@ -103,6 +104,18 @@ a:hover {
   border: none;
   border-radius: 28px;
   cursor: pointer;
+}
+.btn:hover.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: .3;
+  border: inherit;
+  border-radius: inherit;
 }
 
 .btn--green {
@@ -245,7 +258,8 @@ footer .logo {
   }
 
   .header-main {
-  background-image: url('../img/bg-header-desktop.png');
+    background-image: url('../img/bg-header-desktop.png');
+    background-size: contain;
   }
 
   h1 {
@@ -260,7 +274,7 @@ footer .logo {
   }
 
   img {
-    width: 70%;
+    width: 60%;
   }
 
   .text--center {
@@ -268,7 +282,7 @@ footer .logo {
   }
 
   .download-buttons {
-    max-width: 64rem;
+    max-width: 50rem;
     display: flex;
     column-gap: 2rem;
   }
@@ -276,7 +290,7 @@ footer .logo {
   .snippets-features-wrap {
     width: 100%;
     display: flex;
-  }s
+  }
 
   .snippets-features-wrap img {
     width: 52%;
@@ -284,8 +298,49 @@ footer .logo {
   }
 
   .snippets-features {
-    width: 26%;
+    width: 29%;
     padding-block-start: 4rem;
     padding-inline-start: 7rem;
   }
+
+  .workflow-features-wrap {
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 4rem;
+    justify-content: center;
+  }
+
+  .workflow-features-wrap .features {
+    width: 28%;
+    text-align: center;
+  }
+
+  .logo-companies {
+    width: 80%;
+    flex-flow: nowrap;
+    justify-content: space-between;
+  }
+  
+  footer {
+    padding-block-start: 2rem;
+  }
+  
+  .footer-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .footer-menu {
+    height: 6.4rem;
+    margin: 0;
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+
+  .footer-menu li {
+    width: 15ch;
+    height: 2rem;
+  }
+  
 }
