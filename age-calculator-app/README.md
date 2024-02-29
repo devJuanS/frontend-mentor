@@ -10,6 +10,8 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+
 
 ## Overview
 
@@ -43,3 +45,15 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+
+### What I learned
+
+- How to remove arrows/spinners in the input fields when is the type number. Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp)
+  ```css
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  ```

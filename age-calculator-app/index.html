@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Application to calculate the age in years, months and days given a birthdate. This is a challenge from FrontendMentor.io">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Frontend Mentor | Age calculator app</title>
 </head>
 <body>
-  <div class="age-calc-app">
+  <div id="age-calc-app">
     <div class="container-app">
       <form class="form">
-        <div class="form__input-control">
-          <label for="birthDay">DAY</label>
-          <input type="number" id="birthDay" placeholder="DD">
-        </div>
-        <div class="form__input-control">
-          <label for="birthMonth">MONTH</label>
-          <input type="number" id="birthMonth" placeholder="MM">
-        </div>
-        <div class="form__input-control">
-          <label for="birthYear">YEAR</label>
-          <input type="number" id="birthYear" placeholder="YYYY">
+        <div class="form-inputs">
+          <div class="form__input-control">
+            <label for="birthDay">DAY</label>
+            <input type="number" id="birthDay" placeholder="DD" required>
+          </div>
+          <div class="form__input-control">
+            <label for="birthMonth">MONTH</label>
+            <input type="number" id="birthMonth" placeholder="MM" required>
+          </div>
+          <div class="form__input-control">
+            <label for="birthYear">YEAR</label>
+            <input type="number" id="birthYear" placeholder="YYYY" required>
+          </div>
         </div>
         <button type="submit" class="btn-submit"><img src="./assets/icons/icon-arrow.svg"></button>
       </form>

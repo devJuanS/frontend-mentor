@@ -1,5 +1,121 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+:root {
+  font-size: 62.5%;
+  /* Primary colors */
+  --purple:    hsl(259, 100%, 65%);
+  --light-red: hsl(  0, 100%, 67%);
+  /* Neutral colors */
+  --white:       hsl(0, 0%, 100%);
+  --off-white:   hsl(0, 0%,  94%);
+  --light-grey:  hsl(0, 0%,  86%);
+  --smokey-grey: hsl(0, 1%,  44%);
+  --off-black:   hsl(0, 0%,   8%);
+}
 
+body {
+  padding-inline: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--light-grey);
+}
 
-.attribution { font-size: 11px; text-align: center; }
+#age-calc-app {
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  margin-block-end: 8rem;
+  padding-block-end: 6rem;
+  border-block-end: 2px solid var(--light-grey);
+}
+
+.container-app {
+  margin: 10rem 0;
+  padding: 5rem 2.4rem;
+  background-color: var(--white);
+  border-radius: 20px 20px 80px;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input-control {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input-control input {
+  margin-block: 0.4rem;
+  padding: 1.2rem 1.6rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  text-align: left;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form__input-control input:active {
+  border-color: var(--purple);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__input-control label {
+  color: var(--smokey-grey);
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
+
+.btn-submit {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 60px;
+  height: 60px;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-submit img {
+  width: 24px;
+  height: 24px;
+}
+
+.result ul {
+  font-size: 5.2rem;
+  font-style: italic;
+  font-weight: 800;
+  list-style: none;
+  line-height: 5.6rem;
+}
+
+.value {
+  color: var(--purple);
+}
+
+.attribution { font-size: 11px; font-weight: 400; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
