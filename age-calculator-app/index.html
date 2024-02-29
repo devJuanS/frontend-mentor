@@ -8,7 +8,32 @@
   <title>Frontend Mentor | Age calculator app</title>
 </head>
 <body>
-  
+  <div class="age-calc-app">
+    <div class="container-app">
+      <form class="form">
+        <div class="form__input-control">
+          <label for="birthDay">DAY</label>
+          <input type="number" id="birthDay" placeholder="DD">
+        </div>
+        <div class="form__input-control">
+          <label for="birthMonth">MONTH</label>
+          <input type="number" id="birthMonth" placeholder="MM">
+        </div>
+        <div class="form__input-control">
+          <label for="birthYear">YEAR</label>
+          <input type="number" id="birthYear" placeholder="YYYY">
+        </div>
+        <button type="submit" class="btn-submit"><img src="./assets/icons/icon-arrow.svg"></button>
+      </form>
+      <section class="result">
+        <ul>
+          <li><span class="value" id="years">--</span> years</li>
+          <li><span class="value" id="months">--</span> months</li>
+          <li><span class="value" id="days">--</span> days</li>
+        </ul>
+      </section>
+    </div>
+  </div>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
