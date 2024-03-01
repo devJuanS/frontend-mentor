@@ -31,6 +31,7 @@ body {
 }
 
 #age-calc-app {
+  max-width: 375px;
   width: 100%;
 }
 
@@ -59,22 +60,21 @@ body {
   flex-direction: column;
 }
 
-.form__input-control input {
+input {
   margin-block: 0.4rem;
-  padding: 1.2rem 1.6rem;
+  padding: 0.8rem 1.6rem;
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   text-align: left;
   border: 1px solid var(--light-grey);
   border-radius: 8px;
   cursor: pointer;
 }
-.form__input-control input:active {
-  border-color: var(--purple);
+input:focus {
+  outline: 1px solid var(--purple);
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -92,17 +92,20 @@ input::-webkit-inner-spin-button {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   background-color: var(--purple);
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
+.btn-submit:active {
+  background-color: var(--off-black);
+}
 
 .btn-submit img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .result ul {
@@ -117,5 +120,71 @@ input::-webkit-inner-spin-button {
   color: var(--purple);
 }
 
+.required-value label,
+.no-valid-value label{
+  color: var(--light-red);
+}
+.required-value input,
+.no-valid-value input {
+  border-color: var(--light-red);
+}
+.required-value::after {
+  content: 'This field is required';
+  color: var(--light-red);  
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+.no-valid-value::after {
+  content: 'Must be ';
+  color: var(--light-red);  
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--light-grey);
+}
+
 .attribution { font-size: 11px; font-weight: 400; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (width > 680px) {
+  #age-calc-app {
+    max-width: 680px;
+  }
+
+  .container-app {
+    border-end-end-radius: 180px;
+    transition: border-end-end-radius .3s ease-in-out;
+  }
+
+  .form {
+    margin-block-end: 4rem;
+    padding-block-end: 3rem;
+  }
+
+  .form-inputs {
+    max-width: 440px;
+  }
+
+  .form__input-control input {
+    font-size: 3.2rem;
+  }
+
+  .btn-submit {
+    right: 0;
+    left: unset;
+    transform: translate(0, 50%);
+    transition: all .8s ease;
+  }
+
+  .result ul {
+    font-size: 8.2rem;
+    line-height: 8.6rem;
+  }
+}
