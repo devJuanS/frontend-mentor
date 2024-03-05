@@ -48,12 +48,36 @@ Users should be able to:
 
 ### What I learned
 
-- How to remove arrows/spinners in the input fields when is the type number. Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp)
+- How to remove arrows/spinners in the input fields when is the type number. Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp):
   ```css
   /* Chrome, Safari, Edge, Opera */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+  ```
+- How to validate the day entered by user through regular expressions. Thanks to [Regex Generator site](https://regex-generator.olafneumann.org/) by [Olaf Neumann](https://github.com/noxone/):
+  ```js
+  function useRegex(input) {
+    let regex = /^(0?[1-9]|[12][0-9]|3[01])$/i;
+    return regex.test(input);
+  }
+  ```
+  Applied in my code:
+  ```js
+  const isDayValid = (day, month, year) => {
+    let regexMonthDay = /^(0?[1-9]|[12][0-9]|3[01])$/i;
+    let maxDayinMonth;
+
+    if ( !regexMonthDay.test(day) ) return false;
+
+    if ( +month === 2 ) {
+      maxDayinMonth = isLeap(+year) ? 29 : 28;  
+    } else {
+      maxDayinMonth = ((+month % 7) % 2) === 0 ? 30 : 31;
+    }
+
+    return (+day > 0 && +day <= maxDayinMonth);
   }
   ```

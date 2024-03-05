@@ -114,34 +114,43 @@ input::-webkit-inner-spin-button {
   font-weight: 800;
   list-style: none;
   line-height: 5.6rem;
+  letter-spacing: -.2rem;
 }
 
 .value {
   color: var(--purple);
 }
 
-.required-value label,
-.no-valid-value label{
+.error-with-input label{
   color: var(--light-red);
 }
-.required-value input,
-.no-valid-value input {
+.error-with-input input {
   border-color: var(--light-red);
+}
+.error-with-input::after {
+  /* content: ''; */
+  color: var(--light-red);  
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
 }
 .required-value::after {
   content: 'This field is required';
-  color: var(--light-red);  
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 400;
 }
-.no-valid-value::after {
-  content: 'Must be ';
-  color: var(--light-red);  
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 400;
+.no-valid-day::after {
+  content: 'Must be a valid day';
 }
+.no-valid-month::after {
+  content: 'Must be a valid month';
+}
+.no-valid-year::after {
+  content: 'Must be a valid year';
+}
+.not-in-the-past::after {
+  content: 'Must be in the past';
+}
+
+
 
 footer {
   position: fixed;
@@ -159,6 +168,7 @@ footer {
   }
 
   .container-app {
+    padding-inline: 4.4rem;
     border-end-end-radius: 180px;
     transition: border-end-end-radius .3s ease-in-out;
   }
