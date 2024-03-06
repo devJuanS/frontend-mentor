@@ -5,7 +5,7 @@ const btnSubmit  = document.querySelector('.btn-submit'),
       numYears   = document.getElementById('years'),
       numMonths  = document.getElementById('months'),
       numDays    = document.getElementById('days'),
-      form       = document.getElementById('form');
+      form       = document.querySelector('form');
 
 /**
  * Find if a given year is a leap year in the Gregorian calendar.
@@ -138,26 +138,53 @@ function renderAge({ageInYears, ageInMonths, ageInDays}) {
   daysSpan.textContent   = ageInDays;
 }
 
-// Listeners
+/**
+ * Clear the classes to style the errors in the input
+ * @param {HTMLInputElement} input 
+ */
+function clearErrorsInInput(input) {
+  if ( !input.parentElement.classList.contains('error-with-input') ) return;
+    
+    input.parentElement.classList.remove(
+      'error-with-input',
+      'required-value',
+      'not-in-the-past',
+      `no-valid-${ input.id.replace('birth','').toLowerCase()}`
+    );
+    input.value = '';
+}
+
+// *** Listeners ***
 btnSubmit.addEventListener('click', (e) => {
   e.preventDefault();
   const inputs          = [inputDay, inputMonth, inputYear],
+        inputDayValue   = inputDay.value, 
+        inputMonthValue = inputMonth.value, 
+        inputYearValue  = inputYear.value,
         noInputsEntered = !inputs.map( isValueEntered ).every(val => !!val);
   
+  numYears.textContent  = '--';
+  numMonths.textContent = '--';
+  numDays.textContent   = '--';
+
   // 1. validate if some values is missed
   if (noInputsEntered) {
     e.preventDefault(); // prevent form reload from submitting
     throw new Error('At least one value for day, month or year is missing.');
   }
   // 2. validate if the date is not valid value
-  if ( !isDateValid(inputDay.value, inputMonth.value, inputYear.value) ) {
+  if ( !isDateValid(inputDayValue, inputMonthValue, inputYearValue) ) {
     e.preventDefault(); // prevent form reload from submitting
-    inputDay.parentElement.className += !isDayValid(inputDay.value, inputMonth.value, inputYear.value) ? 
+    inputDay.parentElement.className += !isDayValid(inputDayValue, inputMonthValue, inputYearValue) ? 
                                         ' error-with-input no-valid-day' : '';
+    inputMonth.parentElement.className += inputMonthValue > 0 && inputMonthValue <= 12 ? 
+                                          '' : ' error-with-input no-valid-month';
+    inputYear.parentElement.className += inputYearValue > 0 && inputYearValue <= 9999 ? 
+                                          '' : ' error-with-input no-valid-year';
     throw new Error('The day values is not valid.');
   }
   // 3. validate if the date is in the future
-  const userDate = new Date(`${ inputMonth.value }/${ inputDay.value }/${ inputYear.value }`);
+  const userDate = new Date(`${ inputMonthValue }/${ inputDayValue }/${ inputYearValue }`);
   if ( userDate > new Date ) {
     e.preventDefault(); // prevent form reload from submitting
     inputs.forEach( input => {
@@ -169,4 +196,10 @@ btnSubmit.addEventListener('click', (e) => {
   const ageInYearsMonthsDays = getAgeInYearsMonthsDays(userDate);
   renderAge(ageInYearsMonthsDays);
   
+});
+
+const inputs = [inputDay, inputMonth, inputYear];
+
+inputs.forEach( input => {
+  input.addEventListener('focus', () => clearErrorsInInput(input));
 });
