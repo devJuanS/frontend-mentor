@@ -81,3 +81,4 @@ Users should be able to:
     return (+day > 0 && +day <= maxDayinMonth);
   }
   ```
+- Use ``e.preventDefault()`` to prevent form reload from submitting. This to use when there is some error with the entered data.
