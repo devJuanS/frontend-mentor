@@ -133,9 +133,26 @@ function renderAge({ageInYears, ageInMonths, ageInDays}) {
         monthsSpan = document.getElementById('months'),
         daysSpan   = document.getElementById('days');
 
-  yearsSpan.textContent  = ageInYears;
-  monthsSpan.textContent = ageInMonths;
-  daysSpan.textContent   = ageInDays;
+  updateResult(daysSpan, ageInDays);
+  updateResult(monthsSpan, ageInMonths);
+  updateResult(yearsSpan, ageInYears);
+}
+
+/**
+ * Update the element value as increment counter animation
+ * @param {HTMLElement} element 
+ * @param {number | string} target 
+ */
+const updateResult = ( element, target ) => {
+  const value     = isNaN(+element.textContent) ? 0 : +element.textContent;
+  const increment = 1;
+
+  if(value < +target) {
+      element.textContent = `${Math.ceil(value + increment)}`;
+      setTimeout(() => updateResult(element, target), 50);
+  } else {
+      element.textContent = target;
+  }
 }
 
 /**
