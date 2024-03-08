@@ -86,20 +86,23 @@ const isValueEntered = ( inputEL) => {
  * @returns {Object <number>} age in years, months and days
  */
 const getAgeInYearsMonthsDays = ( birthDate ) => {
-  const currentDate    = new Date();
+  const currentDate       = new Date();
 
-  const diffInDays   =  ( currentDate.getDate() - birthDate.getDate() );
-  const diffInMonths =  ( currentDate.getMonth() - birthDate.getMonth() )
-                      - ( diffInDays < 0 ? 1 : 0 );
+  const diffInDays        =  ( currentDate.getDate()  - birthDate.getDate()  );
+  const diffInMonths      =  ( currentDate.getMonth() - birthDate.getMonth() )
+                           - ( diffInDays   < 0 ?  1 : 0 );
 
-  const priorMonthDate    = new Date(substractMonths( currentDate, Math.abs(diffInMonths) ));
-  const priorMonthMaxDays = getMaxDaysInMonth( priorMonthDate.getMonth() + 1 , priorMonthDate.getFullYear() );
+  const priorMonthDate    = new Date(substractMonths( currentDate, 1 ));
+  const priorMonthMaxDays = getMaxDaysInMonth( 
+                              priorMonthDate.getMonth() + 1 , 
+                              priorMonthDate.getFullYear() );
   const ageInDays         = ( diffInDays < 0  ? priorMonthMaxDays : 0 ) + diffInDays;
 
-  const ageInMonths  = diffInMonths + ( diffInMonths < 0 ? 12 : 0 ); 
-        
-  const ageInYears   =   ( currentDate.getFullYear() - birthDate.getFullYear() )
-                       - ( diffInMonths < 0 ? 1 : 0 );
+  const ageInMonths       = diffInMonths 
+                            + ( diffInMonths < 0 ? 12 : 0 );
+
+  const ageInYears        = ( currentDate.getFullYear() - birthDate.getFullYear() )
+                            - ( diffInMonths < 0 ? 1 : 0 );
                       
   return {ageInYears, ageInMonths, ageInDays};
 }
@@ -209,14 +212,14 @@ btnSubmit.addEventListener('click', (e) => {
     });
     throw new Error('The date must be in the past.');
   }
-  
+
   const ageInYearsMonthsDays = getAgeInYearsMonthsDays(userDate);
   renderAge(ageInYearsMonthsDays);
-  
 });
 
 const inputs = [inputDay, inputMonth, inputYear];
 
 inputs.forEach( input => {
+  input.addEventListener('click', () => clearErrorsInInput(input));
   input.addEventListener('focus', () => clearErrorsInInput(input));
 });
