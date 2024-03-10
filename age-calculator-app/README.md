@@ -106,3 +106,5 @@ Users should be able to:
 ## Acknowledgments
 
 Thanks to [Olaf Neumann](https://github.com/noxone/), [John Au-Yeung](https://hohanga.medium.com/) and [Borislav Hadzhiev](https://bobbyhadz.com/about) for their shared resources (articles and web tools) that helped me to achieve a better solution to the challenge.
+
+Also, I want to thank to [Brad Traversy](https://github.com/bradtraversy) because of his project [Increment Counter](https://github.com/bradtraversy/50projects50days/tree/master/incrementing-counter) for day 15 solution which allowed me to animate the numbers in age result part for this challenge.
