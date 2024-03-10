@@ -11,6 +11,9 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -32,12 +35,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+- Desktop screenshot
+
+  ![Desktop](./assets/screenshots/screenshot-1440px.png)
+- Mobile screenshot
+
+  ![Mobile](./assets/screenshots/screenshot-375px.png) 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/devJuanS/frontend-mentor/tree/main/age-calculator-app](https://github.com/devJuanS/frontend-mentor/tree/main/age-calculator-app)
+- Live Site URL: [https://devjuans.github.io/frontend-mentor/age-calculator-app](https://devjuans.github.io/frontend-mentor/age-calculator-app)
 
 ## My process
 
@@ -45,6 +53,8 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- Mobile-first workflow
+- Vanilla JavaScript
 
 ### What I learned
 
@@ -82,3 +92,17 @@ Users should be able to:
   }
   ```
 - Use ``e.preventDefault()`` to prevent form reload from submitting. This to use when there is some error with the entered data.
+
+### Useful resources
+
+- [How to Determine the Number of Days in a Month with JavaScript?](https://javascript.plainenglish.io/how-to-determine-the-number-of-days-in-a-month-with-javascript-3d837575a398) - This article in Medium from [John Au-Yeung](https://hohanga.medium.com/) helped me to find how to determine the number of days in a month in an easy form using the method ``getDate()``.
+- [Subtract Months from a Date in JavaScript](https://bobbyhadz.com/blog/javascript-date-subtract-months) - Thanks to [Borislav Hadzhiev](https://bobbyhadz.com/about) because your article gave me an excellent solution for me to subtract months to a date.
+
+## Author
+
+- GitHub - [devJuanS](https://github.com/devJuanS)
+- Frontend Mentor - [@devJuanS](https://www.frontendmentor.io/profile/devJuanS)
+
+## Acknowledgments
+
+Thanks to [Olaf Neumann](https://github.com/noxone/), [John Au-Yeung](https://hohanga.medium.com/) and [Borislav Hadzhiev](https://bobbyhadz.com/about) for their shared resources (articles and web tools) that helped me to achieve a better solution to the challenge.
