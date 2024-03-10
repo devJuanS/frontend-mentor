@@ -1,0 +1,200 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  /* Primary colors */
+  --purple:    hsl(259, 100%, 65%);
+  --light-red: hsl(  0, 100%, 67%);
+  /* Neutral colors */
+  --white:       hsl(0, 0%, 100%);
+  --off-white:   hsl(0, 0%,  94%);
+  --light-grey:  hsl(0, 0%,  86%);
+  --smokey-grey: hsl(0, 1%,  44%);
+  --off-black:   hsl(0, 0%,   8%);
+}
+
+body {
+  padding-inline: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--light-grey);
+}
+
+#age-calc-app {
+  max-width: 375px;
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  margin-block-end: 8rem;
+  padding-block-end: 6rem;
+  border-block-end: 2px solid var(--light-grey);
+}
+
+.container-app {
+  margin: 10rem 0;
+  padding: 5rem 2.4rem;
+  background-color: var(--white);
+  border-radius: 20px 20px 80px;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input-control {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-block: 0.4rem;
+  padding: 0.8rem 1.6rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  cursor: pointer;
+}
+input:focus {
+  outline: 1px solid var(--purple);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__input-control label {
+  color: var(--smokey-grey);
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
+
+.btn-submit {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 72px;
+  height: 72px;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-submit:active {
+  background-color: var(--off-black);
+}
+
+.btn-submit img {
+  width: 32px;
+  height: 32px;
+}
+
+.result ul {
+  font-size: 5.2rem;
+  font-style: italic;
+  font-weight: 800;
+  list-style: none;
+  line-height: 5.6rem;
+  letter-spacing: -.2rem;
+}
+
+.value {
+  color: var(--purple);
+}
+
+.error-with-input label{
+  color: var(--light-red);
+}
+.error-with-input input {
+  border-color: var(--light-red);
+}
+.error-with-input::after {
+  /* content: ''; */
+  color: var(--light-red);  
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+.required-value::after {
+  content: 'This field is required';
+}
+.no-valid-day::after {
+  content: 'Must be a valid day';
+}
+.no-valid-month::after {
+  content: 'Must be a valid month';
+}
+.no-valid-year::after {
+  content: 'Must be a valid year';
+}
+.not-in-the-past::after {
+  content: 'Must be in the past';
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--light-grey);
+}
+
+.attribution { font-size: 11px; font-weight: 400; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (width > 680px) {
+  #age-calc-app {
+    max-width: 680px;
+  }
+
+  .container-app {
+    padding-inline: 4.4rem;
+    border-end-end-radius: 180px;
+    transition: border-end-end-radius .3s ease-in-out;
+  }
+
+  .form {
+    margin-block-end: 4rem;
+    padding-block-end: 3rem;
+  }
+
+  .form-inputs {
+    max-width: 440px;
+  }
+
+  .form__input-control input {
+    font-size: 3.2rem;
+  }
+
+  .btn-submit {
+    right: 0;
+    left: unset;
+    transform: translate(0, 50%);
+    transition: all .8s ease;
+  }
+
+  .result ul {
+    font-size: 8.2rem;
+    line-height: 8.6rem;
+  }
+}
