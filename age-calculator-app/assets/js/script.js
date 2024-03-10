@@ -101,8 +101,8 @@ const getAgeInYearsMonthsDays = ( birthDate ) => {
   const ageInMonths       = diffInMonths 
                             + ( diffInMonths < 0 ? 12 : 0 );
 
-  const ageInYears        = ( currentDate.getFullYear() - birthDate.getFullYear() )
-                            - ( diffInMonths < 0 ? 1 : 0 );
+  const ageInYears        =  ( currentDate.getFullYear() - birthDate.getFullYear() )
+                           - ( diffInMonths < 0 ? 1 : 0 );
                       
   return {ageInYears, ageInMonths, ageInDays};
 }
@@ -163,22 +163,24 @@ const updateResult = ( element, target ) => {
  * @param {HTMLInputElement} input 
  */
 function clearErrorsInInput(input) {
+  
   if ( !input.parentElement.classList.contains('error-with-input') ) return;
-    
-    input.parentElement.classList.remove(
-      'error-with-input',
-      'required-value',
-      'not-in-the-past',
-      `no-valid-${ input.id.replace('birth','').toLowerCase()}`
-    );
-    input.value = '';
+  
+  input.parentElement.classList.remove(
+    'error-with-input',
+    'required-value',
+    'not-in-the-past',
+    `no-valid-${ input.id.replace('birth','').toLowerCase()}`
+  );
 }
 
 // *** Listeners ***
 btnSubmit.addEventListener('click', (e) => {
   e.preventDefault();
-  const inputs          = [inputDay, inputMonth, inputYear],
-        inputDayValue   = inputDay.value, 
+  const inputs          = [inputDay, inputMonth, inputYear];
+  inputs.forEach(clearErrorsInInput);
+
+  const inputDayValue   = inputDay.value, 
         inputMonthValue = inputMonth.value, 
         inputYearValue  = inputYear.value,
         noInputsEntered = !inputs.map( isValueEntered ).every(val => !!val);
