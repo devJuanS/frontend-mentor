@@ -92,7 +92,7 @@ const getAgeInYearsMonthsDays = ( birthDate ) => {
   const diffInMonths      =  ( currentDate.getMonth() - birthDate.getMonth() )
                            - ( diffInDays   < 0 ?  1 : 0 );
 
-  const priorMonthDate    = new Date(substractMonths( currentDate, 1 ));
+  const priorMonthDate    = new Date(subtractMonths( currentDate, 1 ));
   const priorMonthMaxDays = getMaxDaysInMonth( 
                               priorMonthDate.getMonth() + 1 , 
                               priorMonthDate.getFullYear() );
@@ -113,7 +113,7 @@ const getAgeInYearsMonthsDays = ( birthDate ) => {
  * @param {number | string} months 
  * @returns {date}
  */
-const substractMonths = (date, months) => {
+const subtractMonths = (date, months) => {
   return date.setMonth(date.getMonth() - months);
 }
 
