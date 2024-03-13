@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *,
 ::after,
 ::before {
@@ -8,4 +10,79 @@
 
 :root {
   font-size: 62.5%;
+  /* Colors */
+  --primary-color:   hsl(  4, 100%,  67%);
+  --dark-slate-grey: hsl(234,  29%,  20%);
+  --charcoal-grey:   hsl(235,  18%,  26%);
+  --grey:            hsl(231,   7%,  60%);
+  --white:           hsl(  0,   0%, 100%);
+  /* Paths */
+  --hero-img-mobile:  url('../img/illustration-sign-up-mobile.svg');
+  --hero-img-desktop: url('../img/illustration-sign-up-desktop.svg');
 }
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--dark-slate-grey);
+}
+
+.newsletter-signup {
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white);
+  overflow-wrap: break-word;
+}
+
+.hero-img {
+  width: inherit;
+  height: 284px;
+  background-image: var(--hero-img-mobile);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#formSignup {
+  margin: 3rem 2rem;
+}
+
+.form-title {
+  margin-block-end: 2rem;
+  font-size: 4rem;
+}
+
+.form-features {
+  margin-block: 3rem;
+  /* padding-inline-start: 3rem; */
+  list-style: none;
+  /* list-style: disc outside url(../icons/icon-list.svg); */
+}
+
+.form-features li{
+  display: flex;
+}
+.form-features li::before {
+  content: url(../icons/icon-list.svg);
+  margin-inline-end: 2rem;
+}
+
+
+/* Success message */
+
+.success-msg {
+  display: none;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--light-grey);
+}
+
+.attribution { font-size: 11px; font-weight: 400; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

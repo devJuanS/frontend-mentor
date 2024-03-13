@@ -3,11 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Application form to sign-up to a newsletter">
   <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/icons/favicon-32x32.png">
   <link rel="stylesheet" href="./src/assets/css/style.css">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-  
+  <article class="newsletter-signup">
+    <div class="hero-img"></div>
+    <form id="formSignup">
+      <h2 class="form-title">Stay updated!</h2>
+      <p class="form-description">
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+      <ul class="form-features">
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <label for="email">Email address</label>
+      <input type="email" name="email" id="email" autocomplete="email" placeholder="email@company.com">
+      <button class="btn" id="btn-submit">Subscribe to monthly newsletter</button>
+    </form>
+  </article>
+
+  <article class="success-msg">
+    <div class="success-icon"></div>
+    <h2 class="success-title">Thanks for subscribing!</h2>
+    <p class="msg-text">
+      A confirmation email has been sent to <strong id="signedupEmail">ash@loremcompany.com</strong>. 
+      Please open it and click the button inside to confirm your subscritption
+    </p>
+    <button class="btn" id="btn-dismiss">Dismiss message</button>
+  </article>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/devJuanS">devJuanS</a>.
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
 </html>
