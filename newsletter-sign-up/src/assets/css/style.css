@@ -25,6 +25,7 @@ body {
 
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
+  line-height: 2.6rem;
   background-color: var(--dark-slate-grey);
 }
 
@@ -45,8 +46,8 @@ body {
   background-size: contain;
 }
 
-#formSignup {
-  margin: 3rem 2rem;
+.form-container {
+  padding: 4rem 2rem;
 }
 
 .form-title {
@@ -56,17 +57,46 @@ body {
 
 .form-features {
   margin-block: 3rem;
-  /* padding-inline-start: 3rem; */
   list-style: none;
-  /* list-style: disc outside url(../icons/icon-list.svg); */
 }
 
 .form-features li{
+  margin-block-end: 1.2rem;
   display: flex;
 }
 .form-features li::before {
   content: url(../icons/icon-list.svg);
-  margin-inline-end: 2rem;
+  margin-inline-end: 1.6rem;
+}
+
+#formSignup {
+  display: flex;
+  flex-direction: column;
+}
+
+#formSignup label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#formSignup input {
+  margin-block: 0.6rem;
+  padding: 1.2rem;
+  font: inherit;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+}
+
+.btn {
+  margin-block: 2rem;
+  padding-block: 1.6rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--dark-slate-grey);
+  border: none;
+  border-radius: 8px;
 }
 
 

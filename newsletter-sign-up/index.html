@@ -11,7 +11,7 @@
 <body>
   <article class="newsletter-signup">
     <div class="hero-img"></div>
-    <form id="formSignup">
+    <div class="form-container">
       <h2 class="form-title">Stay updated!</h2>
       <p class="form-description">
         Join 60,000+ product managers receiving monthly updates on:
@@ -21,10 +21,12 @@
         <li>Measuring to ensure updates are a success</li>
         <li>And much more!</li>
       </ul>
-      <label for="email">Email address</label>
-      <input type="email" name="email" id="email" autocomplete="email" placeholder="email@company.com">
-      <button class="btn" id="btn-submit">Subscribe to monthly newsletter</button>
-    </form>
+      <form id="formSignup">
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="email" autocomplete="email" placeholder="email@company.com">
+        <button class="btn" id="btn-submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
   </article>
 
   <article class="success-msg">
