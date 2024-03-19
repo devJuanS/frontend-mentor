@@ -22,7 +22,6 @@
 }
 
 body {
-
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 2.6rem;
@@ -47,7 +46,7 @@ body {
 }
 
 .form-container {
-  padding: 4rem 2rem;
+  padding: 4rem 2.4rem;
 }
 
 .form-title {
@@ -75,16 +74,29 @@ body {
 }
 
 #formSignup label {
+  position: relative;
   font-size: 1.2rem;
   font-weight: 700;
+}
+#formSignup label.no-valid-email::after {
+  content: 'Valid email required';
+  position: absolute;
+  right: 0;
+  color: var(--primary-color);
 }
 
 #formSignup input {
   margin-block: 0.6rem;
-  padding: 1.2rem;
+  padding: 1.2rem 2.4rem;
   font: inherit;
   border: 1px solid var(--grey);
   border-radius: 8px;
+  cursor: pointer;
+}
+#formSignup input.no-valid-email {
+  color: var(--primary-color);
+  background-color: hsla(  4, 100%,  67%, .2);
+  border-color: var(--primary-color);
 }
 
 .btn {
@@ -94,9 +106,20 @@ body {
   font-size: inherit;
   font-weight: 700;
   color: var(--white);
+  line-height: 2rem;
   background-color: var(--dark-slate-grey);
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:active {
+  /*
+   * Created with https://www.css-gradient.com
+   * Gradient link: https://www.css-gradient.com/?c1=ff527c&c2=ff683e&gt=l&gd=dcl
+   */
+  background: rgb(255, 82, 124);
+  background: linear-gradient(90deg, rgb(255, 82, 125), rgb(255, 104, 62));
 }
 
 
@@ -111,8 +134,10 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: var(--light-grey);
+  color: #777;
+  background-color: hsla(235,  18%,  26%, 0.4);
+  border-radius: 10px 10px 0 0;
 }
 
-.attribution { font-size: 11px; font-weight: 400; text-align: center; }
+.attribution { font-size: 1.1rem; font-weight: 400; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
