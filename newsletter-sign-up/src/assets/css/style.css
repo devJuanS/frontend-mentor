@@ -17,8 +17,9 @@
   --grey:            hsl(231,   7%,  60%);
   --white:           hsl(  0,   0%, 100%);
   /* Paths */
-  --hero-img-mobile:  url('../img/illustration-sign-up-mobile.svg');
-  --hero-img-desktop: url('../img/illustration-sign-up-desktop.svg');
+  --hero-img-mobile-url:  url('../img/illustration-sign-up-mobile.svg');
+  --hero-img-desktop-url: url('../img/illustration-sign-up-desktop.svg');
+  --icon-success-url:     url('../icons/icon-success.svg');
 }
 
 body {
@@ -29,6 +30,8 @@ body {
 }
 
 .newsletter-signup {
+  display: none;
+
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
@@ -39,7 +42,7 @@ body {
 .hero-img {
   width: inherit;
   height: 284px;
-  background-image: var(--hero-img-mobile);
+  background-image: var(--hero-img-mobile-url);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -49,9 +52,11 @@ body {
   padding: 4rem 2.4rem;
 }
 
-.form-title {
+.form-title,
+.success-title {
   margin-block-end: 2rem;
   font-size: 4rem;
+  line-height: 4.4rem;
 }
 
 .form-features {
@@ -104,7 +109,7 @@ body {
   padding-block: 1.6rem;
   font-family: inherit;
   font-size: inherit;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--white);
   line-height: 2rem;
   background-color: var(--dark-slate-grey);
@@ -120,15 +125,39 @@ body {
    */
   background: rgb(255, 82, 124);
   background: linear-gradient(90deg, rgb(255, 82, 125), rgb(255, 104, 62));
+  box-shadow: 0px 20px 28px 0px rgba(255, 104, 62,0.3);
 }
 
 
 /* Success message */
 
 .success-msg {
-  display: none;
+  /* display: none; */
+
+  max-width: 375px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 14rem 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  overflow-wrap: break-word;
 }
 
+.success-icon {
+  --icon-size: 64px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-block-end: 4rem;
+  background-image: var(--icon-success-url);
+}
+
+.success-text {
+  flex-grow: 1;
+}
+
+/* Footer */
 
 footer {
   position: fixed;
