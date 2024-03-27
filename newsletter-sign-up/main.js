@@ -1,2 +1,5 @@
+import { NewsletterSignup } from './src/newsletter-signup.js';
 
-console.log('App started 🫡');
+const formSignup = document.getElementById('formSignup');
+
+NewsletterSignup( formSignup );
