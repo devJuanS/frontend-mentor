@@ -81,19 +81,19 @@ body {
   flex-direction: column;
 }
 
-#formSignup label {
+#emailLabel {
   position: relative;
   font-size: 1.2rem;
   font-weight: 700;
 }
-#formSignup label.no-valid-email::after {
+#emailLabel.no-valid-email::after {
   content: 'Valid email required';
   position: absolute;
   right: 0;
   color: var(--primary-color);
 }
 
-#formSignup input {
+#email {
   margin-block: 0.6rem;
   padding: 1.2rem 2.4rem;
   font: inherit;
@@ -101,7 +101,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-#formSignup input.no-valid-email {
+#email.no-valid-email {
   color: var(--primary-color);
   background-color: hsla(  4, 100%,  67%, .2);
   border-color: var(--primary-color);
@@ -202,8 +202,8 @@ footer {
   .newsletter-signup {
     min-width: 748px;
     max-width: calc( var(--nls-padding-value) * 3 
-                      + (368px + var(--form-padding-inline) * 2) 
-                      + 400px);
+                     + (368px + var(--form-padding-inline) * 2) 
+                     +  400px );
     padding: var(--nls-padding-value);
     display: flex;
     flex-direction: row-reverse;
