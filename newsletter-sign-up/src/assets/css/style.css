@@ -161,13 +161,13 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: #777;
-  background-color: hsla(235,  18%,  26%, 0.4);
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: hsla(235,  18%,  26%, 0.9);
   border-radius: 10px 10px 0 0;
 }
 
 .attribution { font-size: 1.1rem; font-weight: 400; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(228, 54%, 76%); }
 
 @media (width >= 768px) {
   body.success--display {
