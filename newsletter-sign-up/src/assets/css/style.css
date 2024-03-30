@@ -32,9 +32,13 @@ body {
   background-color: var(--dark-slate-grey);
 }
 
-.newsletter-signup {
-  /* display: none; */
+.title {
+  margin-block-end: 2rem;
+  font-size: 4rem;
+  line-height: 4.4rem;
+}
 
+.newsletter-signup-form {
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
@@ -55,13 +59,6 @@ body {
   padding: 4rem var(--form-padding-inline);
 }
 
-.form-title,
-.success-title {
-  margin-block-end: 2rem;
-  font-size: 4rem;
-  line-height: 4.4rem;
-}
-
 .form-features {
   margin-block: 3rem;
   list-style: none;
@@ -76,7 +73,7 @@ body {
   margin-inline-end: 1.6rem;
 }
 
-#formSignup {
+#signupForm {
   display: flex;
   flex-direction: column;
 }
@@ -135,14 +132,12 @@ body {
 /* Success message */
 
 .success-msg {
-  display: none;
-
   max-width: 375px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
   padding: 14rem 2.4rem 2rem;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   background-color: var(--white);
   overflow-wrap: break-word;
@@ -175,7 +170,7 @@ footer {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (width >= 768px) {
-  body {
+  body.success--display {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -191,7 +186,7 @@ footer {
     border-radius: 20px;
   }
 
-  .success-title {
+  .success-msg .title {
     font-size: 5.6rem;
     line-height: 5.8rem;
     transition: font-size 1s ease-out;
@@ -199,7 +194,14 @@ footer {
 }
 
 @media (width >= 1024px) {
-  .newsletter-signup {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsletter-signup-form {
     min-width: 748px;
     max-width: calc( var(--nls-padding-value) * 3 
                      + (368px + var(--form-padding-inline) * 2) 
@@ -225,7 +227,7 @@ footer {
     align-content: center;
   }
 
-  .form-title {
+  .form-container .title {
     font-size: 5.6rem;
     transition: font-size 1s ease-out;
   }

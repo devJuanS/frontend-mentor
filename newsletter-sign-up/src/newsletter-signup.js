@@ -1,11 +1,6 @@
-import { validateEmail } from "./use-cases/validate-email.js";
+import { renderSignupForm } from "./presentation/render-signup-form/render-signup-form.js";
 
-export function NewsletterSignup() {
-  const formSignup = document.getElementById('formSignup');
+export function NewsletterSignup( element ) {
 
-  formSignup.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    validateEmail( formSignup );
-  });
+  renderSignupForm(element);
 }
