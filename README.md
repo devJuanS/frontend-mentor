@@ -8,3 +8,9 @@ Challenges from Frontend Mentor as a route to improve my coding skills
 3. [Results Summary Component](https://devjuans.github.io/frontend-mentor/results-summary-component/)
 4. [Clipboard Landing Page](https://devjuans.github.io/frontend-mentor/clipboard-landing-page/)
 5. [Age Calculator App](https://devjuans.github.io/frontend-mentor/age-calculator-app/)
+6. [Newsletter Sign-up Form](https://devjuans.github.io/frontend-mentor/newsletter-sign-up)
+
+## Author
+
+- GitHub - [devJuanS](https://github.com/devJuanS)
+- Frontend Mentor - [@devJuanS](https://www.frontendmentor.io/profile/devJuanS)
