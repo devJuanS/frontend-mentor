@@ -27,22 +27,8 @@ export function renderSignupSuccessMsg(element, email) {
   signedupEmail.textContent = email;
 
   const button = message.querySelector('#btnDismiss');
-  button.addEventListener('click', () => {
-    renderSignupForm(element);
-    removeBodySuccessDisplay();
-  });
+  button.addEventListener('click', () => renderSignupForm(element));
 
   element.innerHTML = '';
   element.append(message);
-  addBodySuccessDisplay();
-}
-
-const body = document.querySelector('body');
-
-function addBodySuccessDisplay() {
-  body.classList.add('success--display');
-}
-
-function removeBodySuccessDisplay() {
-  body.classList.remove('success--display');
 }

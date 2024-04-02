@@ -170,7 +170,7 @@ footer {
 .attribution a { color: hsl(228, 54%, 76%); }
 
 @media (width >= 768px) {
-  body.success--display {
+  body:has(.success-msg) {
     height: 100vh;
     display: flex;
     align-items: center;
