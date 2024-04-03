@@ -55,15 +55,24 @@ Users should be able to:
 - JavaScript modules
 
 ### What I learned
-How to validate the email entered by a user through a regular expressions. Thanks to the site [©w3resource.com](https://www.w3resource.com/) for the article [JavaScript: HTML Form - email validation](https://www.w3resource.com/javascript/form/email-validation.php), where I took the regular expressions for my function as follow:
-```js
-const isValidEmail = ( email ) => {
-  if ( !email ) return false;
-  let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+- How to validate the email entered by a user through a regular expressions. Thanks to the site [©w3resource.com](https://www.w3resource.com/) for the article [JavaScript: HTML Form - email validation](https://www.w3resource.com/javascript/form/email-validation.php), where I took the regular expressions for my function as follow:
+  ```js
+  const isValidEmail = ( email ) => {
+    if ( !email ) return false;
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-  return regex.test(email);
-}
-```
+    return regex.test(email);
+  }
+  ```
+- How to style elements based on their contents using `:has()` CSS pseudo-class. Thanks to the article [The Power of `:has()` in CSS](https://css-tricks.com/the-power-of-has-in-css) published by [Chris DeMars](https://css-tricks.com/author/chrisdemars/) could use one sentence in CSS instead of add/remove a class with JavaScript to style the body when it its content there is the class `success-msg`:
+  ```css
+  body:has(.success-msg) {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ```
 
 ### Useful resources
 - The [Regex Generator site](https://regex-generator.olafneumann.org/) by [Olaf Neumann](https://github.com/noxone/) has been useful to generate and test regular expressions.
