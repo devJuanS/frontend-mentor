@@ -8,17 +8,38 @@
 
 :root {
   font-family: "Rubik", sans-serif;
+  font-size: 62.5%;
   font-weight: 400;
   line-height: 1.5;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.9);
-  background-color: #202020;
+  color:              rgb(255 255 255 / .9);
+  background-color:   rgb(32, 32, 32);
+  /* ## Primary colors ## */
+  --primary-color:    hsl(246, 80%, 60%);
+  --work-color:       hsl(15, 100%, 70%);
+  --play-color:       hsl(195, 74%, 62%);
+  --study-color:      hsl(348, 100%, 68%);
+  --exercise-color:   hsl(145, 58%, 55%);
+  --socialcolor:      hsl(264, 64%, 52%);
+  --self-care-color:  hsl(43, 84%, 65%);
+  /* ## Neutral colors ## */
+  --very-dark-blue:   hsl(226, 43%, 10%);
+  --dark-blue:        hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-Blue:        hsl(236, 100%, 87%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
 }
 
 
