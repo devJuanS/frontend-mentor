@@ -1,5 +1,7 @@
+import { renderNavbarDashboard } from "./presentation/render-navbar-dashboard/render-navbar-dashboard";
 
 export const TimeTrackApp = ( element ) => {
 
-  element.innerHTML = 'Loading...';
+  renderNavbarDashboard(element);
+
 }

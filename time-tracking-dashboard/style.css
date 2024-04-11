@@ -7,14 +7,9 @@
 }
 
 :root {
-  font-family: "Rubik", sans-serif;
-  font-size: 62.5%;
-  font-weight: 400;
-  line-height: 1.5;
-  color-scheme: light dark;
-  color:              rgb(255 255 255 / .9);
-  background-color:   rgb(32, 32, 32);
   /* ## Primary colors ## */
+  --font-color:       rgb(255 255 255 / .9);
+  --background-color: rgb(32, 32, 32);
   --primary-color:    hsl(246, 80%, 60%);
   --work-color:       hsl(15, 100%, 70%);
   --play-color:       hsl(195, 74%, 62%);
@@ -26,7 +21,18 @@
   --very-dark-blue:   hsl(226, 43%, 10%);
   --dark-blue:        hsl(235, 46%, 20%);
   --desaturated-blue: hsl(235, 45%, 61%);
-  --pale-Blue:        hsl(236, 100%, 87%);
+  --pale-blue:        hsl(236, 100%, 87%);
+  /* ## Measurements ## */
+  --cards-radius: 16px;
+  
+  
+  font-family: "Rubik", sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color:              var(--font-color);
+  background-color:   var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -40,6 +46,15 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
+}
+
+#app {
+  width: 100vw;
+}
+
+.dashboard {
+  width: 100%;
+  padding: 2rem;
 }
 
 
