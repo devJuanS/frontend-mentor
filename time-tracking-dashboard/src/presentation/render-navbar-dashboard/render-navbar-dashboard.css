@@ -40,7 +40,7 @@
   opacity: .8;
 }
 
-.time-views-options {
+.period-views-options {
   padding-block: 2rem;
   display: flex;
   justify-content: space-around;
@@ -48,6 +48,10 @@
   font-size: 1.6rem;
   font-weight: 400;
   list-style: none;
+  cursor: pointer;
 }
 
-.time-view-selected { color: var(--font-color) }
+.period-view--selected { 
+  color: var(--font-color);
+  cursor: none;
+}

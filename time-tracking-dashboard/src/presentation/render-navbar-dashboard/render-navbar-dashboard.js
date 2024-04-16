@@ -10,7 +10,24 @@ export const renderNavbarDashboard = ( element ) => {
   navbar.innerHTML = navbarHtml;
   navbar.className = 'navbar';
 
-  //TODO: add event listeners
+  const periodViewOptions    = navbar.querySelector('.period-views-options'),
+        periodViewOptionsLi  = navbar.querySelectorAll('.period-view-option');
+
+  periodViewOptions.addEventListener('click', (elementList) => {
+    // clean the class used to style the option selected to every list item
+    periodViewOptionsLi.forEach( option => {
+      option.classList.remove('period-view--selected')
+    });
+    
+    const selectedOption = elementList.target.id;
+    if ( selectedOption ) {
+      const selectedOptionElement = navbar.querySelector(`#${ selectedOption }`);
+      selectedOptionElement.classList.add('period-view--selected');
+      //TODO: return the id of the period view option selected
+      console.log(selectedOption);
+    }
+    
+  });
 
   element.append( navbar );
 }
