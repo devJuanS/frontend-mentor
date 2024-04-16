@@ -1,0 +1,57 @@
+.task-card { 
+  position: relative;
+  margin-block: 2rem;
+}
+
+.card-header {
+  width: 100%;
+  height: calc(40px + 20px);
+  background-repeat: no-repeat;
+  background-position-x: 94%;
+  background-position-y: 50%;
+  border-start-start-radius: var(--cards-radius);
+  border-start-end-radius: var(--cards-radius);
+}
+
+.card-header.work {
+  background-color: var(--work-color);
+  background-image: url('/src/assets/icons/icon-work.svg');
+}
+
+.card-content {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  padding: 2.5rem 2.2rem;
+  background-color: var(--dark-blue);
+  border-radius: var(--cards-radius);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-option {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('/src/assets/icons/icon-ellipsis.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.times {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current-time {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.prior-time {
+  color: var(--desaturated-blue);
+}
