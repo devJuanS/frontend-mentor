@@ -26,6 +26,10 @@
   background-color: var(--dark-blue);
   border-radius: var(--cards-radius);
 }
+.card-content:active {
+  background-color: hsl(236, 41%, 34%);
+  cursor: pointer;
+}
 
 .content-header {
   display: flex;
@@ -35,11 +39,13 @@
 .card-option {
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url('/src/assets/icons/icon-ellipsis.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  mask: url('/src/assets/icons/icon-ellipsis.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background: var(--pale-blue);
   cursor: pointer;
 }
+.card-option:hover { background: var(--font-color) }
 
 .times {
   display: flex;
@@ -53,5 +59,6 @@
 }
 
 .prior-time {
-  color: var(--desaturated-blue);
+  color: var(--pale-blue);
+  font-weight: 300;
 }

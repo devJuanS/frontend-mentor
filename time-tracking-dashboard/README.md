@@ -62,23 +62,19 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- How to change the color of a SVG using as a mask instead of a background image. Thanks to [Chris Coyier](https://css-tricks.com/author/chriscoyier/) for the instructions in his article [Change Color of SVG on Hover](https://css-tricks.com/change-color-of-svg-on-hover/). View this in details in [here](https://css-tricks.com/change-color-of-svg-on-hover/#aa-use-a-mask-instead-of-a-background-image). The following was the style that was used:
+  ```css
+  .card-option {
+    width: 2.4rem;
+    height: 2.4rem;
+    mask: url('/src/assets/icons/icon-ellipsis.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background: var(--pale-blue);
+    cursor: pointer;
+  }
+  .card-option:hover { background: var(--font-color) }
+  ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
