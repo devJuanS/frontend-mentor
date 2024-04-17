@@ -6,6 +6,8 @@ export const renderTaskCard = ( task, element ) => {
   card.innerHTML = taskCardHTML;
   card.classList.add('task-card');
 
+  //TODO: add event listeners.
+
 
   element.append( card );
 }

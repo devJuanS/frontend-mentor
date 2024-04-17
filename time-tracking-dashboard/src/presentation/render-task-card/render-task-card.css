@@ -30,6 +30,7 @@
   background-color: hsl(236, 41%, 34%);
   cursor: pointer;
 }
+.card-content:hover { cursor: pointer }
 
 .content-header {
   display: flex;
