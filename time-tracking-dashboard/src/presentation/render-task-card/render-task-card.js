@@ -1,4 +1,3 @@
-import taskCardHTML from './render-task-card.html?raw';
 import './render-task-card.css';
 
 export const renderTaskCard = ( task, element ) => {

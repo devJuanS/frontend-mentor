@@ -52,7 +52,6 @@ class TaskCard extends HTMLElement {
    * @param {String} newValue The new attribute value
    */
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log('changed', name, oldValue, newValue, this);
     this.render();
   }
 
@@ -68,10 +67,11 @@ class TaskCard extends HTMLElement {
    * Render the component into the UI 
    */
   render() {
+    const titleClass = this.name.split(' ').join('-').toLowerCase();
     const html  = `
       <div>
         <article class="task-card">
-          <header class="card-header ${ this.name }"></header>
+          <header class="card-header ${ titleClass }"></header>
           <main class="card-content">
             <header class="content-header">
               <h2 class="card-title">${ capitalizeWord(this.name) }</h2>
@@ -97,6 +97,7 @@ class TaskCard extends HTMLElement {
 
         .task-card { 
           position: relative;
+          max-width: 360px;
           width: 100%;
           margin-block: 2rem;
         }
@@ -111,9 +112,9 @@ class TaskCard extends HTMLElement {
           border-start-end-radius: var(--cards-radius);
         }
         
-        .card-header.${ this.name } {
-          background-color: var(--${ this.name }-color);
-          background-image: url('/src/assets/icons/icon-${ this.name }.svg');
+        .card-header.${ titleClass } {
+          background-color: var(--${ titleClass }-color);
+          background-image: url('/src/assets/icons/icon-${ titleClass }.svg');
         }
         
         .card-content {
