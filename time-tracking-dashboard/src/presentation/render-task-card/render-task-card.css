@@ -37,6 +37,11 @@
   justify-content: space-between;
 }
 
+.card-title { 
+  font-size: 1.8rem;
+  font-weight: var(--bold-font-weight);
+}
+
 .card-option {
   width: 2.4rem;
   height: 2.4rem;
@@ -56,10 +61,10 @@
 
 .current-time {
   font-size: 3.2rem;
-  font-weight: 300;
+  font-weight: var(--light-font-weight);
 }
 
 .prior-time {
   color: var(--pale-blue);
-  font-weight: 300;
+  font-weight: var(--light-font-weight);
 }
