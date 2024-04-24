@@ -67,10 +67,10 @@ class TaskCard extends HTMLElement {
    * Render the component into the UI 
    */
   render() {
-    const titleClass = this.name.split(' ').join('-').toLowerCase();
+    const logoTask = this.name.split(' ').join('-').toLowerCase();
     const html  = `
       <div>
-        <article class="task-card ${ titleClass }">
+        <article class="task-card">
           <header class="card-header"></header>
           <main class="card-content">
             <header class="content-header">
@@ -98,21 +98,18 @@ class TaskCard extends HTMLElement {
         .task-card { 
           position: relative;
           min-width: 280px;
-          max-width: 360px;
           width: 100%;
-          background-repeat: no-repeat;
-          background-position-x: 94%;
-          background-position-y: -10%;
+          background-color: var(--${ logoTask }-color);
           border-radius: var(--cards-radius);
         }
 
-        .task-card.${ titleClass } {
-          background-color: var(--${ titleClass }-color);
-          background-image: url('/src/assets/icons/icon-${ titleClass }.svg');
-        }
-        
         .card-header {
+          width: 100%;
           height: 40px;
+          background-image: url('/src/assets/icons/icon-${ logoTask }.svg');
+          background-repeat: no-repeat;
+          background-position-x: 92%;
+          background-position-y: 24%;
         }
         
         .card-content {

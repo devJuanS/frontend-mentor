@@ -1,8 +1,8 @@
 .tasks-board {
   width: 100%;
   padding-block: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  justify-content: center;
 }
