@@ -1,8 +1,17 @@
+task-card { height: 100% }
+
 .tasks-board {
-  width: 100%;
   padding-block: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-content: center;
+}
+
+@media (width >= 920px) {
+  .tasks-board {
+    width: 75%;
+    padding: 0;
+    gap: 4rem;
+  }
 }

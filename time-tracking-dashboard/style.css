@@ -60,6 +60,17 @@ body {
   padding: 2rem;
 }
 
+@media (width >= 920px) {
+  body { align-items: center }
+
+  .dashboard {
+    max-height: 680px;
+    height: 100vh;
+    display: flex;
+    column-gap: 4rem;
+    overflow: scroll;
+  }
+}
 
 @media (prefers-color-scheme: light) {
   :root {

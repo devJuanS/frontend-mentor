@@ -69,7 +69,7 @@ class TaskCard extends HTMLElement {
   render() {
     const logoTask = this.name.split(' ').join('-').toLowerCase();
     const html  = `
-      <div>
+      <div class="component-box">
         <article class="task-card">
           <header class="card-header"></header>
           <main class="card-content">
@@ -95,10 +95,13 @@ class TaskCard extends HTMLElement {
           padding: 0;
         }
 
+        .component-box { height: inherit }
+
         .task-card { 
           position: relative;
           min-width: 280px;
           width: 100%;
+          height: inherit;
           background-color: var(--${ logoTask }-color);
           border-radius: var(--cards-radius);
         }
@@ -114,7 +117,10 @@ class TaskCard extends HTMLElement {
         
         .card-content {
           width: 100%;
+          height: calc(100% - 40px);
           padding: 2.5rem 2.2rem;
+          display: flex;
+          flex-direction: column;
           background-color: var(--dark-blue);
           border-radius: var(--cards-radius);
         }
@@ -159,6 +165,17 @@ class TaskCard extends HTMLElement {
         .prior-time {
           color: var(--pale-blue);
           font-weight: 300;
+        }
+
+        @media (width >= 920px){
+          .times {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            flex: 1;
+          }
+
+          .current-time { font-size: 6.2rem }
         }
       </style>
     `;
