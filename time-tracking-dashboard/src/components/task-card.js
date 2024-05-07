@@ -4,28 +4,28 @@ class TaskCard extends HTMLElement {
     this.shadow = this.attachShadow({ mode: 'open' });
   }
 
-  get name() {
-    return this.getAttribute('name');
+  get title() {
+    return this.getAttribute('title');
   }
 
-  set name(val) {
-    this.setAttribute('name', val);
+  set title(val) {
+    this.setAttribute('title', val);
   }
 
-  get time() {
-    return this.getAttribute('time');
+  get currentTime() {
+    return this.getAttribute('current-time');
   }
 
-  set time(val) {
-    this.setAttribute('time', val);
+  set currentTime(val) {
+    this.setAttribute('current-time', val);
   }
 
-  get priorTime() {
-    return this.getAttribute('prior-time');
+  get previousTime() {
+    return this.getAttribute('previous-time');
   }
 
-  set priorTime(val) {
-    this.setAttribute('prior-time', val);
+  set previousTime(val) {
+    this.setAttribute('previous-time', val);
   }
 
   /**
@@ -60,26 +60,27 @@ class TaskCard extends HTMLElement {
 	 * @return  {Array} The attributes to observe
 	 */
 	static get observedAttributes() {
-		return ['name', 'time', 'prior-time'];
+		return ['title', 'current-time', 'previous-time'];
 	}
 
   /**
    * Render the component into the UI 
    */
   render() {
-    const logoTask = this.name.split(' ').join('-').toLowerCase();
+    const logoTask = this.title.split(' ').join('-').toLowerCase();
+    // TODO: replace text content based on timeframe in small tag with class 'prior-time'
     const html  = `
       <div class="component-box">
         <article class="task-card">
           <header class="card-header"></header>
           <main class="card-content">
             <header class="content-header">
-              <h2 class="card-title">${ this.name }</h2>
+              <h2 class="card-title">${ this.title }</h2>
               <span class="card-option"></span>
             </header>
             <div class="times">
-              <span class="current-time">${ this.time }hrs</span>
-              <small class="prior-time">Last week - ${ this.priorTime }hrs</small>
+              <span class="current-time">${ this.currentTime }hrs</span>
+              <small class="previous-time">Last week - ${ this.previousTime }hrs</small>
             </div>
           </main>
         </article>
@@ -162,7 +163,7 @@ class TaskCard extends HTMLElement {
           font-weight: 300;
         }
         
-        .prior-time {
+        .previous-time {
           color: var(--pale-blue);
           font-weight: 300;
         }

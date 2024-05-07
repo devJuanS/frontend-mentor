@@ -12,10 +12,10 @@ export const renderTasksBoard = ( element, timeframe ) => {
   
   tasksData.forEach( task => {
     if ( !task ) return;
-    const card     = document.createElement('task-card');
-    card.name      = task.title;
-    card.time      = task.timeframes[timeframe].current;
-    card.priorTime = task.timeframes[timeframe].previous;
+    const card        = document.createElement('task-card');
+    card.title        = task.title;
+    card.currentTime  = task.timeframes[timeframe].current;
+    card.previousTime = task.timeframes[timeframe].previous;
 
     tasksBoard.append(card);
   });
