@@ -13,5 +13,10 @@ task-card { height: 100% }
     width: 75%;
     padding: 0;
     gap: 4rem;
+    overflow-y: scroll;
   }
+}
+
+@media (width >= 1310px) { 
+  .tasks-board { overflow-y: hidden } 
 }

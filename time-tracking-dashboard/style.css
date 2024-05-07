@@ -63,12 +63,15 @@ body {
 @media (width >= 920px) {
   body { align-items: center }
 
+  #app {
+    max-width: 1440px;
+  }
+
   .dashboard {
     max-height: 680px;
     height: 100vh;
     display: flex;
     column-gap: 4rem;
-    overflow: scroll;
   }
 }
 
