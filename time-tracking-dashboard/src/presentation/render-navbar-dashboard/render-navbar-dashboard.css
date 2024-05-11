@@ -39,7 +39,7 @@
   font-weight: 300;
 }
 
-.period-views-options {
+.timeframes-options {
   padding-block: 2rem;
   display: flex;
   justify-content: space-around;
@@ -50,7 +50,11 @@
   cursor: pointer;
 }
 
-.period-view--selected { 
+.time-option:hover {
+  color: var(--font-color);
+}
+
+.timeframe--selected { 
   color: var(--font-color);
   cursor: none;
 }
@@ -80,7 +84,7 @@
     line-height: 6.0rem;
   }
 
-  .period-views-options {
+  .timeframes-options {
     height: 32%;
     margin-inline: 4rem;
     flex-direction: column;

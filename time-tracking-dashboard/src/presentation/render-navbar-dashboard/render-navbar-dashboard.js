@@ -1,4 +1,5 @@
 import navbarHtml from './render-navbar-dashboard.html?raw';
+import { updateTimesInCards } from '../render-tasks-board/render-tasks-board';
 import './render-navbar-dashboard.css';
 
 let navbar;
@@ -10,23 +11,17 @@ export const renderNavbarDashboard = ( element ) => {
   navbar.innerHTML = navbarHtml;
   navbar.className = 'navbar';
 
-  const periodViewOptions    = navbar.querySelector('.period-views-options'),
-        periodViewOptionsLi  = navbar.querySelectorAll('.period-view-option');
+  const timeframeLi = navbar.querySelectorAll('.time-option');
+  
+  timeframeLi.forEach( item => {
+    item.addEventListener('click', element => {
+      // clean the class used to style the option selected to every list item
+      const timeframeSelected = navbar.querySelector('li.timeframe--selected');
+      timeframeSelected.classList.remove('timeframe--selected');
 
-  periodViewOptions.addEventListener('click', (elementList) => {
-    // clean the class used to style the option selected to every list item
-    periodViewOptionsLi.forEach( option => {
-      option.classList.remove('period-view--selected')
+      item.classList.add('timeframe--selected');
+      updateTimesInCards(element.target.id);
     });
-    
-    const selectedOption = elementList.target.id;
-    if ( selectedOption ) {
-      const selectedOptionElement = navbar.querySelector(`#${ selectedOption }`);
-      selectedOptionElement.classList.add('period-view--selected');
-      //TODO: return the id of the period view option selected
-      console.log(selectedOption);
-    }
-    
   });
 
   element.append( navbar );
