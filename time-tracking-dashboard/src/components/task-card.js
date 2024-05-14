@@ -10,6 +10,14 @@ class TaskCard extends HTMLElement {
 
   set title(val) {
     this.setAttribute('title', val);
+  
+  }
+  get timeframe() {
+    return this.getAttribute('timeframe');
+  }
+
+  set timeframe(val) {
+    this.setAttribute('timeframe', val);
   }
 
   get currentTime() {
@@ -60,7 +68,7 @@ class TaskCard extends HTMLElement {
 	 * @return  {Array} The attributes to observe
 	 */
 	static get observedAttributes() {
-		return ['title', 'current-time', 'previous-time'];
+		return ['title', 'timeframe', 'current-time', 'previous-time'];
 	}
 
   /**
@@ -80,7 +88,7 @@ class TaskCard extends HTMLElement {
             </header>
             <div class="times">
               <span class="current-time">${ this.currentTime }hrs</span>
-              <small class="previous-time">Last week - ${ this.previousTime }hrs</small>
+              <small class="previous-time">Last ${ this.timeframe } - ${ this.previousTime }hrs</small>
             </div>
           </main>
         </article>

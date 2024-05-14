@@ -34,6 +34,7 @@ const createTaskCards = ( element, timeframe ) => {
     
     const card        = document.createElement('task-card');
     card.title        = task.title;
+    card.timeframe    = timeframe === 'daily' ? 'day' : timeframe.slice(0, -2);  // remove 'ly' from the word
     card.currentTime  = task.timeframes[timeframe].current;
     card.previousTime = task.timeframes[timeframe].previous;
   
@@ -49,6 +50,7 @@ export const updateTimesInCards = ( timeframe ) => {
 
   tasksData.forEach( task => {
     const card = document.querySelector(`task-card[title="${ task.title }"]`);
+    card.timeframe    = timeframe === 'daily' ? 'day' : timeframe.slice(0, -2);  // remove 'ly' from the word
     card.currentTime  = task.timeframes[timeframe].current;
     card.previousTime = task.timeframes[timeframe].previous;
   });
