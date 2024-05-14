@@ -30,17 +30,17 @@ Users should be able to:
 
 - Desktop screenshot
 
-  ![Desktop](./screenshot/screenshot-1440px.png)
+  ![Desktop](./screenshots/screenshot-1440px.png)
 
 - Mobile screenshot
 
-  ![Mobile](./screenshot/screenshot-375px.png)
+  ![Mobile](./screenshots/screenshot-375px.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/devJuanS/frontend-mentor/tree/main/time-tracking-dashboard](https://github.com/devJuanS/frontend-mentor/tree/main/time-tracking-dashboard)
+- Live Site URL: [https://devjuans.github.io/frontend-mentor/time-tracking-dashboard](https://devjuans.github.io/frontend-mentor/time-tracking-dashboard)
 
 ## My process
 
@@ -51,11 +51,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Vanilla JS web component
+- [Vite](https://vitejs.dev/) - Build tool
 
 ### What I learned
 
@@ -75,7 +72,7 @@ Users should be able to:
 
 - How to create a web component. In the articles from [Chris Ferdinandi](https://gomakethings.com/about/) and [Melike Kavcıoğlu](https://mellowdevs.medium.com/) cited under [Useful resources](#useful-resources) section, I found the necessary instructions to create a web component with vanilla JS that help me to code my first task card component to use in this challenge.
 
-- How to import a component in a project in vanilla JavaScript when using Vite. Thanks to [@AlexMercedCoder](https://www.alexmercedcoder.dev/) because with its video [AM Coder - Using Native Web Components with Vite (The New Hot Bundler in Town)](https://www.youtube.com/watch?v=AvAv-ObQWg4) I could resolve this doubt. The way to import a component in vanilla JS is adding this line in the main script JS (main.js in the case of this challenge):
+- How to import a component in a vanilla JavaScript project when using Vite. Thanks to [@AlexMercedCoder](https://www.alexmercedcoder.dev/) because with its video [AM Coder - Using Native Web Components with Vite (The New Hot Bundler in Town)](https://www.youtube.com/watch?v=AvAv-ObQWg4) I could resolve this doubt. The way to import a component in vanilla JS is adding this line in the main script JS (main.js in the case of this challenge):
   ```js
   import './src/components/task-card';
   ```
@@ -93,9 +90,9 @@ Users should be able to:
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I am interested in learning more about web components coding in vanilla JavaScript before learning a framework. And I have found useful the articles published by [Chris Ferdinandi](https://gomakethings.com/about/) in [GoMakeThings.com](https://gomakethings.com/articles/).
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Furthermore, it will be great to work in a new challenge in which the states and CRUD processes can be implemented.
 
 ### Useful resources
 
