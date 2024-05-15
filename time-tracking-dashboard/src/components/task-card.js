@@ -118,7 +118,7 @@ class TaskCard extends HTMLElement {
         .card-header {
           width: 100%;
           height: 40px;
-          background-image: url('/src/assets/icons/icon-${ logoTask }.svg');
+          background-image: url('/icons/icon-${ logoTask }.svg');
           background-repeat: no-repeat;
           background-position-x: 92%;
           background-position-y: 24%;
@@ -152,7 +152,7 @@ class TaskCard extends HTMLElement {
         .card-option {
           width: 2.4rem;
           height: 2.4rem;
-          mask: url('/src/assets/icons/icon-ellipsis.svg');
+          mask: url('/icons/icon-ellipsis.svg');
           mask-repeat: no-repeat;
           mask-position: center;
           background: var(--pale-blue);
