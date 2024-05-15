@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/devJuanS/frontend-mentor/tree/main/time-tracking-dashboard](https://github.com/devJuanS/frontend-mentor/tree/main/time-tracking-dashboard)
-- Live Site URL: [https://devjuans.github.io/frontend-mentor/time-tracking-dashboard](https://devjuans.github.io/frontend-mentor/time-tracking-dashboard)
+- Live Site URL: [https://time-tracking-fm.netlify.app](https://time-tracking-fm.netlify.app)
 
 ## My process
 
