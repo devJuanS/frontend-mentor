@@ -9,7 +9,7 @@ Challenges from Frontend Mentor as a route to improve my coding skills
 4. [Clipboard Landing Page](https://devjuans.github.io/frontend-mentor/clipboard-landing-page/)
 5. [Age Calculator App](https://devjuans.github.io/frontend-mentor/age-calculator-app/)
 6. [Newsletter Sign-up Form](https://devjuans.github.io/frontend-mentor/newsletter-sign-up)
-7. [Time tracking dashboard](https://devjuans.github.io/frontend-mentor/time-tracking-dashboard)
+7. [Time tracking dashboard](https://time-tracking-fm.netlify.app/)
 
 
 ## Author
