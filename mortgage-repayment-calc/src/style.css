@@ -1,15 +1,18 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 62.5%;
 }
 
-.attribution {
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+body {
+  background-color: hsl(202, 86%, 94%);
 }
 
 @font-face {
