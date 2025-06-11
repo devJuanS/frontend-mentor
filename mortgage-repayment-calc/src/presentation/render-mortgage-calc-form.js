@@ -48,9 +48,8 @@ export function renderMortgageCalcForm(htmlElement) {
     const formInputValues = validateCalcForm(formSection);
 
     if (formInputValues === null) return;
-    // calculate values to render
+
     const resultValues = calculateRepayment(formInputValues);
-    // render results
     renderMortgageCalcResults(htmlElement, resultValues);
   });
 

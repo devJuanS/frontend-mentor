@@ -47,8 +47,8 @@ Users should be able to:
 ### Tasks on development process
 
 - [x] Render the form to enter information for calculation.
-- [ ] Validate the form inputs.
-- [ ] Calculate the monthly repayment and total repayment amounts with valid values.
+- [x] Validate the form inputs.
+- [x] Calculate the monthly repayment and total repayment amounts with valid values.
 - [ ] Show errors for invalid input values.
 - [ ] Render the results of calculation.
 - [ ] Add final styles.
@@ -61,3 +61,6 @@ Users should be able to:
 ## Acknowledgments
 
 Thanks to ...
+
+- Article [How to Calculate Mortgage Repayments](https://www.nerdwallet.com/au/home-loans/how-mortgage-repayments-work) written by [Alan Hartstein](https://www.nerdwallet.com/au/author/alan-hartstein) and [Georgia Rose](https://www.nerdwallet.com/au/author/georgia-rose).
+- App [Mortgage calculator](https://tools.moneyhelper.org.uk/en/mortgage-calculator) by [MoneyHelper](https://moneyhelper.org.uk/).

@@ -1,3 +1,8 @@
+/**
+ * Calculate the monthly payments and total payments over a mortgage term based on mortgage type.
+ * @param {Object} mortgageInfo Mortgage information.
+ * @returns Object with values from the calculation.
+ */
 export function calculateRepayment({
   mortgageAmount,
   mortgageTerm,
@@ -13,12 +18,15 @@ export function calculateRepayment({
     monthlyPayment * 12 * mortgageTerm +
     (mortgageType === 'interest' && mortgageAmount);
 
-  // console.log(
-  //   `Month repayment: $ ${monthlyPayment}\nTotal: $ ${totalRepayOverTerm} for a mortgage ${mortgageType}.`
-  // );
   return { monthlyPayment, totalRepayOverTerm };
 }
 
+/**
+ *
+ * @param {Number} mortgageAmount Principal (loan amount).
+ * @param {Number} interestRate
+ * @returns Monthly payment for interest only mortgage.
+ */
 const getMonthlyInterestOnly = (mortgageAmount, interestRate) => {
   const monthlyRate = interestRate / 100 / 12;
   /*
@@ -32,6 +40,13 @@ const getMonthlyInterestOnly = (mortgageAmount, interestRate) => {
   return mortgageAmount * monthlyRate;
 };
 
+/**
+ *
+ * @param {Number} mortgageAmount Principal (loan amount).
+ * @param {Number} mortgageTerm Total number of years payments.
+ * @param {Number} interestRate
+ * @returns Monthly payment for repayment mortgage.
+ */
 const getMonthlyRepayment = (mortgageAmount, mortgageTerm, interestRate) => {
   // becuase of an zero interest rate cause an erro of division by zero.
   if (!interestRate) {
