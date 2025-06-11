@@ -8,11 +8,15 @@
 
 :root {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 62.5%;
 }
 
 body {
+  font-size: 1rem;
   background-color: hsl(202, 86%, 94%);
+}
+
+input {
+  font-size: 1rem;
 }
 
 @font-face {

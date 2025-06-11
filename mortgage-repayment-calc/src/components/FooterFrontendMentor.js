@@ -18,18 +18,18 @@ customElements.define(
         .footer {
           position: fixed;
           bottom: 0;
-          height: 2rem;
+          height: 2em;
           width: 100vw;
           display: flex;
           align-items: center;
           justify-content: center;
           color: hsla(0, 0%, 100%, 0.7);
+          font-size: calc(11rem / 16);
           background-color: hsla(235, 18%, 26%, 0.9);
           border-radius: 10px 10px 0 0;
         }
 
         .attribution {
-          font-size: 1.1rem;
           text-align: center;
         }
 

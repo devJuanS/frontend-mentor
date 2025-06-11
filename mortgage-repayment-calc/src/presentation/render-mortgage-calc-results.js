@@ -10,6 +10,9 @@ const asideCalcResult = `
   </aside>
 `;
 
-export function renderMortgageCalcResults(htmlElement) {
-  htmlElement.innerHtml = 'Result is loading...';
+export function renderMortgageCalcResults(htmlElement, resultValues) {
+  const { monthlyPayment, totalRepayOverTerm } = resultValues;
+  htmlElement.append(
+    `Result\n - Monthly repayments: $ ${monthlyPayment}.\n - Total over the term: $ ${totalRepayOverTerm}`
+  );
 }
