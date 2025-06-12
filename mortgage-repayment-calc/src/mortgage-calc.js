@@ -1,4 +1,5 @@
 import { renderMortgageCalcForm } from './presentation/render-mortgage-calc-form';
+import { renderMortgageCalcResults } from './presentation/render-mortgage-calc-results';
 
 /**
  *
@@ -6,4 +7,5 @@ import { renderMortgageCalcForm } from './presentation/render-mortgage-calc-form
  */
 export function MortgageCalc(htmlElement) {
   renderMortgageCalcForm(htmlElement);
+  renderMortgageCalcResults(htmlElement);
 }
