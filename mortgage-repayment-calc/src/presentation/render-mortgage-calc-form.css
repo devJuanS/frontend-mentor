@@ -1,0 +1,5 @@
+.user-input:has(> .required-field)::after {
+  content: 'This field is required';
+  font-size: 0.75em;
+  color: var(--error-color);
+}

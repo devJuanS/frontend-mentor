@@ -49,9 +49,9 @@ Users should be able to:
 - [x] Render the form to enter information for calculation.
 - [x] Validate the form inputs.
 - [x] Calculate the monthly repayment and total repayment amounts with valid values.
-- [ ] Show errors for invalid input values.
-- [ ] Render the results of calculation.
-- [ ] Add final styles.
+- [x] Show errors messages for incomplete fields.
+- [x] Render the results of calculation.
+- [ ] Add styles.
 
 ## Author
 
