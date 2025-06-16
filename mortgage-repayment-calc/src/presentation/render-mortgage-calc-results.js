@@ -3,6 +3,7 @@ import {
   EMPTY_INSTRUCTIONS,
   INSTRUCTIONS_IMAGE_INFO,
 } from '../lib/constants/constants';
+import { formatNumber } from '../lib/helpers/format-number';
 
 let resultsAside;
 
@@ -45,12 +46,11 @@ const createInstructionsElement = (haveValuesToShow) => {
 const createResultCard = ({ monthlyPayment, totalRepayOverTerm }) => {
   const resultCard = document.createElement('article');
   resultCard.classList.add('calc_results__values-wrap');
-  // TODO: format the values.
   resultCard.innerHTML = `
     <h3>Your monthly repayments</h3>
-    <p><strong>${monthlyPayment}</strong></p>
+    <p><strong>${formatNumber(monthlyPayment, 2, 'GBP')}</strong></p>
     <h3>Total you'll repay over term</h3>
-    <p><strong>${totalRepayOverTerm}</strong></p>
+    <p><strong>${formatNumber(totalRepayOverTerm, 2, 'GBP')}</strong></p>
   `;
 
   return resultCard;
