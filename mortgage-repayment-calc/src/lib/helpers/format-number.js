@@ -8,11 +8,8 @@ import { CURRENCY_LOCALES } from '../constants/currency-locales';
  * @returns {string}
  */
 export function formatNumber(number, digits = 0, currency = 'default') {
-  const locale = [
-    CURRENCY_LOCALES[currency][0],
-    { ...CURRENCY_LOCALES[currency][1] },
-  ];
-  locale[1].maximumFractionDigits = digits;
+  const locale = JSON.parse(JSON.stringify(CURRENCY_LOCALES[currency]));
+  locale.options.maximumFractionDigits = digits;
 
-  return Intl.NumberFormat(...locale).format(number);
+  return Intl.NumberFormat(locale.zone, locale.options).format(number);
 }
