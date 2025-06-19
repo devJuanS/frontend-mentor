@@ -6,35 +6,44 @@ import { REQUIRED_CLASS_STATUS } from '../lib/constants/constants';
 import './render-mortgage-calc-form.css';
 
 const formHTML = `
-  <form id="mortgageCalcForm" novalidate class="stack--space-xl">
+  <form id="mortgageCalcForm" novalidate class="stack--space-l">
     <div class="calc-form__header">
       <h2 class="calc-form__title">Mortgage Calculator</h2>
       <input type="reset" class="calc-form__reset" value="Clear All" />
     </div>
-    <div class="calc-form__inputs stack--space-xl">
+    <div class="calc-form__inputs stack--space-l">
       <div class="user-input stack--space-s">
         <label for="mortgageAmount">Mortgage Amount</label>
-        <input id="mortgageAmount" type="number" name="mortgageAmount" class="input--numeric" min="0" required />
+        <div class="input-field">
+          <span class="input__unit">£</span>
+          <input id="mortgageAmount" type="number" name="mortgageAmount" class="input--numeric" min="0" required />
+        </div>
       </div>
-      <div class="inputs__mortgage-conditions stack--space-xl">
+      <div class="inputs__mortgage-conditions stack--space-l">
         <div class="user-input stack--space-s">
           <label for="mortgageTerm">Mortgage Term</label>
-          <input id="mortgageTerm" type="number" name="mortgageTerm" class="input--numeric" min="0" required />
+          <div class="input-field">
+            <input id="mortgageTerm" type="number" name="mortgageTerm" class="input--numeric" min="0" required />
+            <span class="input__unit">years</span>
+          </div>
         </div>
         <div class="user-input stack--space-s">
           <label for="interestRate">Interest Rate</label>
-          <input id="interestRate" type="number" name="interestRate" class="input--numeric" min="0" required />
+          <div class="input-field">
+            <input id="interestRate" type="number" name="interestRate" class="input--numeric" min="0" required />
+            <span class="input__unit">%</span>
+          </div>
         </div>
       </div>
     </div>
     <div class="user-input">
-      <fieldset class="calc-form__mortgage-types user-input stack--space-s">
+      <fieldset class="calc-form__mortgage-types stack--space-s">
         <legend>Mortgage Type</legend>
-        <div class="mortgage-type-option">
+        <div class="mortgage-type-option input-field">
           <input id="mortgageTypeRepayment" type="radio" name="mortgageTypes" value="repayment" />
           <label for="mortgageTypeRepayment" title="Repay capital and interest together.">Repayment</label>
         </div>
-        <div class="mortgage-type-option">
+        <div class="mortgage-type-option input-field">
           <input id="mortgageTypeInterest" type="radio" name="mortgageTypes" value="interest" />
           <label for="mortgageTypeInterest" title="Repay the interest. Capital paid off at end of term.">Interest Only</label>
         </div>

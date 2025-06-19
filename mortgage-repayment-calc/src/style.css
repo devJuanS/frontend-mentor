@@ -54,8 +54,8 @@ input {
   --gap: 0.75em;
 }
 
-.stack--space-xl {
-  --gap: 1.75em;
+.stack--space-l {
+  --gap: 1.5em;
 }
 
 [class*='title'] {
@@ -65,7 +65,7 @@ input {
 }
 
 [class*='button'] {
-  margin-block-end: 0.75em;
+  margin-block-end: 0.5em;
   padding: 0.75em;
   color: var(--color-text-bold);
   background-color: var(--color-primary);
