@@ -9,9 +9,23 @@
 :root {
   --font-normal: 500;
   --font-bold: 700;
+  --font-size-s: 0.75em;
+  --font-size-m: 1.25em;
+  --font-size-l: 1.5em;
 
-  --primary-color: hsl(61, 70%, 52%);
-  --error-color: hsl(4, 69%, 50%);
+  /* Color palette */
+  --color-slate-100: hsl(202, 86%, 94%);
+  --color-slate-300: hsl(203, 41%, 72%);
+  --color-slate-500: hsl(200, 26%, 54%);
+  --color-slate-700: hsl(200, 24%, 40%);
+  --color-slate-900: hsl(202, 55%, 16%);
+  /* Main color */
+  --color-primary: hsl(61, 70%, 52%);
+  --color-background: var(--color-slate-900);
+  --color-text-normal: var(--color-slate-700);
+  --color-text-bold: var(--color-slate-900);
+  --color-error: hsl(4, 69%, 50%);
+  --white: hsl(0, 0%, 100%);
 
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: var(--font-normal);
@@ -19,11 +33,14 @@
 
 body {
   font-size: 1rem;
+  color: var(--color-text-normal);
   background-color: hsl(202, 86%, 94%);
 }
 
 input {
+  font-family: inherit;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 [class*='stack'] {
@@ -33,8 +50,31 @@ input {
   gap: var(--gap);
 }
 
-.stack-s {
-  --gap: 0.5em;
+.stack--space-s {
+  --gap: 0.75em;
+}
+
+.stack--space-xl {
+  --gap: 1.75em;
+}
+
+[class*='title'] {
+  margin-block: 0.5rem;
+  color: var(--color-text-bold);
+  font-size: var(--font-size-l);
+}
+
+[class*='button'] {
+  margin-block-end: 0.75em;
+  padding: 0.75em;
+  color: var(--color-text-bold);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 1.5em;
+  cursor: pointer;
+}
+[class*='button']:hover {
+  background-color: hsl(from var(--color-primary) h s l / 0.6);
 }
 
 @font-face {

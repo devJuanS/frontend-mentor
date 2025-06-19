@@ -1,5 +1,80 @@
+.calc-form-container {
+  padding: clamp(1rem, 6vw, 2rem);
+  background-color: var(--white);
+}
+
+.calc-form__reset {
+  color: var(--color-text);
+  background: none;
+  border: none;
+  border-block-end: 1px solid var(--color-text-normal);
+  cursor: pointer;
+}
+.calc-form__reset:hover {
+  color: var(--color-text-bold);
+}
+
 .user-input:has(> .required-field)::after {
   content: 'This field is required';
-  font-size: 0.75em;
-  color: var(--error-color);
+  font-size: var(--font-size-s);
+  color: var(--color-error);
+}
+
+.input--numeric,
+.mortgage-type-option {
+  padding: 0.5em;
+  color: var(--color-text-bold);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-bold);
+  border: 1px solid var(--color-text-normal);
+  border-radius: 0.25em;
+}
+
+.input--numeric:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.calc-form__mortgage-types {
+  border: none;
+  padding-block-start: 0.75em;
+}
+
+.mortgage-type-option {
+  padding-block: 0.5em;
+  padding-inline: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.mortgage-type-option input {
+  --size: 1.25em;
+  width: var(--size);
+  height: var(--size);
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid var(--color-text-bold);
+  transition: 0.3s all ease-out;
+}
+.mortgage-type-option input:checked {
+  border: 0.25em solid var(--white);
+  outline: 0.125em solid var(--color-primary);
+  background-color: var(--color-primary);
+}
+.mortgage-type-option:has(> input:checked) {
+  background-color: hsl(from var(--color-primary) h s l / 0.3);
+  border-color: var(--color-primary);
+}
+
+.button-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-bold);
+}
+
+.button-submit span {
+  line-height: 1;
 }
