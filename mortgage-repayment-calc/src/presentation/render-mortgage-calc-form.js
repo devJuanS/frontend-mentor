@@ -16,7 +16,7 @@ const formHTML = `
         <label for="mortgageAmount">Mortgage Amount</label>
         <div class="input-field">
           <span class="input__unit">£</span>
-          <input id="mortgageAmount" type="number" name="mortgageAmount" class="input--numeric" min="0" required />
+          <input id="mortgageAmount" type="number" name="mortgageAmount" class="input--numeric" min="0" autocomplete="off" required />
         </div>
       </div>
       <div class="inputs__mortgage-conditions">

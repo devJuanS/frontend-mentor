@@ -36,10 +36,12 @@
   border-radius: 0.25em;
   overflow: hidden;
 }
+.input-field:hover,
 .input-field:has(> .input--numeric:focus) {
   color: var(--color-text-bold);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
+  cursor: pointer;
 }
 .input-field:has(> .required-field) {
   color: var(--white);
@@ -59,6 +61,12 @@
   line-height: 1.4;
   border: none;
   outline: none;
+}
+.input--numeric:hover {
+  cursor: pointer;
+}
+.input--numeric:focus {
+  cursor: text;
 }
 
 .input__unit {
@@ -82,6 +90,9 @@
 .mortgage-type-option:has(> input:checked) {
   background-color: hsl(from var(--color-primary) h s l / 0.3);
   border-color: var(--color-primary);
+}
+.mortgage-type-option label {
+  cursor: pointer;
 }
 
 .mortgage-type-option input[type='radio'] {
