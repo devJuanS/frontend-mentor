@@ -18,8 +18,9 @@ customElements.define(
         .footer {
           position: fixed;
           bottom: 0;
+          left: 0;
+          right: 0;
           height: 2em;
-          width: 100vw;
           display: flex;
           align-items: center;
           justify-content: center;

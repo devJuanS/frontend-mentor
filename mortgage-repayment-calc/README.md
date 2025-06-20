@@ -51,7 +51,8 @@ Users should be able to:
 - [x] Calculate the monthly repayment and total repayment amounts with valid values.
 - [x] Show errors messages for incomplete fields.
 - [x] Render the results of calculation.
-- [ ] Add styles.
+- [x] Add styles.
+- [ ] Show values in mortgage amount input with comma thousands format (300,000).
 
 ### What I learned
 

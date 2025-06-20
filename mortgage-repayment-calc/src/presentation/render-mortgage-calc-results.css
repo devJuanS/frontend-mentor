@@ -8,7 +8,7 @@
 
 .calc-results__instructions {
   margin-block: 0 1.25em;
-  margin-inline: 1.5em;
+  margin-inline: 1.75em;
   text-align: center;
 }
 
@@ -53,4 +53,26 @@
 .values-table__total {
   color: var(--white);
   font-size: var(--font-size-l);
+}
+
+@media (width > 768px) {
+  .calc-results {
+    width: 50%;
+    justify-content: stretch;
+    border-end-start-radius: 14%;
+  }
+  .calc-results:has(img) {
+    justify-content: center;
+  }
+
+  .calc_results__values-table {
+    margin-block-start: 2em;
+    padding-block: 2em;
+  }
+
+  .values-table__repayment {
+    font-size: var(--font-size-xxxl);
+    margin-block-end: 0.75em;
+    padding-block-end: 0.75em;
+  }
 }

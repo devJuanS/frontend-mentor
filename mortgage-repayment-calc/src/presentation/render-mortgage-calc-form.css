@@ -1,6 +1,5 @@
 .calc-form-container {
   padding: clamp(1rem, 6vw, 2rem);
-  background-color: var(--white);
 }
 
 .calc-form__reset {
@@ -12,6 +11,13 @@
 }
 .calc-form__reset:hover {
   color: var(--color-text-bold);
+}
+
+.inputs__mortgage-conditions {
+  --gap: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
 }
 
 .user-input:has(.required-field)::after {
@@ -43,7 +49,7 @@
 }
 
 .input--numeric {
-  min-width: 12ch;
+  width: 0;
   padding-block: 0.5em;
   padding-inline: 0.75em;
   flex-grow: 1;
@@ -97,11 +103,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75em;
+  gap: 0.5em;
   font-size: var(--font-size-m);
   font-weight: var(--font-bold);
 }
 
 .button-submit span {
   line-height: 1;
+}
+
+@media (width > 768px) {
+  .calc-form-container {
+    width: 50%;
+  }
+
+  .calc-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .calc-form__reset {
+    height: fit-content;
+  }
+
+  .inputs__mortgage-conditions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .inputs__mortgage-conditions .user-input {
+    flex-grow: 1;
+  }
+
+  .button-submit {
+    margin-block-start: 0.5em;
+    padding-inline: 1.75em;
+    place-self: flex-start;
+  }
 }
