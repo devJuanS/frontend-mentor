@@ -53,6 +53,13 @@ Users should be able to:
 - [x] Render the results of calculation.
 - [ ] Add styles.
 
+### What I learned
+
+- How to apply opacity only to `background-color` in an element when the color value is defined with variables:
+  ```css
+  background-color: hsl(from var(--color-primary) h s l / 0.3);
+  ```
+
 ## Author
 
 - GitHub - [devJuanS](https://github.com/devJuanS)

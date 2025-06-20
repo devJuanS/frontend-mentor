@@ -1,0 +1,56 @@
+.calc-results {
+  padding-block: 1.5em 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+}
+
+.calc-results__instructions {
+  margin-block: 0 1.25em;
+  margin-inline: 1.5em;
+  text-align: center;
+}
+
+.calc-results .instructions__title {
+  color: var(--white);
+}
+
+.instructions__text {
+  color: var(--color-slate-300);
+  line-height: 1.4;
+}
+
+.calc-results__initial-image {
+  margin-block-start: 1em;
+}
+
+.calc_results__values-table {
+  width: calc(100% - 1.5em * 2);
+  margin-block-end: 1.25em;
+  padding-block: 1.25em;
+  padding-inline: 1em;
+  background-color: hsl(from var(--color-background) h s calc(l - 4));
+  border-radius: 8px;
+  box-shadow: 0 -4px var(--color-primary);
+}
+
+.calc_results__values-table h3 {
+  margin-block-end: 0.5em;
+  color: var(--color-slate-300);
+  font-size: 1em;
+  font-weight: var(--font-normal);
+}
+
+.values-table__repayment {
+  margin-block-end: 0.5em;
+  padding-block: 0.1em 0.4em;
+  color: var(--color-primary);
+  font-size: var(--font-size-xxl);
+  border-block-end: 1px solid var(--color-slate-700);
+}
+
+.values-table__total {
+  color: var(--white);
+  font-size: var(--font-size-l);
+}

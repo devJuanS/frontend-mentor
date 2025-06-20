@@ -4,6 +4,7 @@ import {
   INSTRUCTIONS_IMAGE_INFO,
 } from '../lib/constants/constants';
 import { formatNumber } from '../lib/helpers/format-number';
+import './render-mortgage-calc-results.css';
 
 let resultsAside;
 
@@ -29,7 +30,7 @@ const createInstructionsElement = (haveValuesToShow) => {
     ? COMPLETED_INSTRUCTIONS
     : EMPTY_INSTRUCTIONS;
 
-  instructions.classList.add('calc-results__instructions');
+  instructions.classList.add('calc-results__instructions', 'stack--space-xs');
   instructions.innerHTML = `
     <h2 class="instructions__title">${title}</h2>
     <p class="instructions__text">${text}</p>
@@ -45,12 +46,20 @@ const createInstructionsElement = (haveValuesToShow) => {
  */
 const createResultCard = ({ monthlyPayment, totalRepayOverTerm }) => {
   const resultCard = document.createElement('article');
-  resultCard.classList.add('calc_results__values-wrap');
+  resultCard.classList.add('calc_results__values-table');
   resultCard.innerHTML = `
     <h3>Your monthly repayments</h3>
-    <p><strong>${formatNumber(monthlyPayment, 2, 'GBP')}</strong></p>
+    <p class="values-table__repayment"><strong>${formatNumber(
+      monthlyPayment,
+      2,
+      'GBP'
+    )}</strong></p>
     <h3>Total you'll repay over term</h3>
-    <p><strong>${formatNumber(totalRepayOverTerm, 2, 'GBP')}</strong></p>
+    <p class="values-table__total"><strong>${formatNumber(
+      totalRepayOverTerm,
+      2,
+      'GBP'
+    )}</strong></p>
   `;
 
   return resultCard;
@@ -83,6 +92,7 @@ export function renderMortgageCalcResults(htmlElement, resultValues) {
 
   if (haveValuesToShow) {
     const resultCard = createResultCard({ ...resultValues });
+    instructions.classList.add('text--left');
     resultsAside.append(instructions, resultCard);
   } else {
     const initialImage = createInitialImage(
