@@ -4,6 +4,7 @@ import { renderMortgageCalcResults } from './render-mortgage-calc-results';
 import { cleanValidationErrors } from './clean-validation-errors';
 import { REQUIRED_CLASS_STATUS } from '../lib/constants/constants';
 import './render-mortgage-calc-form.css';
+import { formatNumber } from '../lib/helpers/format-number';
 
 const formHTML = `
   <form id="mortgageCalcForm" novalidate class="stack--space-l">
@@ -16,21 +17,21 @@ const formHTML = `
         <label for="mortgageAmount">Mortgage Amount</label>
         <div class="input-field">
           <span class="input__unit">£</span>
-          <input id="mortgageAmount" type="number" name="mortgageAmount" class="input--numeric" min="0" autocomplete="off" required />
+          <input id="mortgageAmount" type="text" inputmode="numeric" name="mortgageAmount" class="input--numeric" autocomplete="off" required />
         </div>
       </div>
       <div class="inputs__mortgage-conditions">
         <div class="user-input stack--space-s">
           <label for="mortgageTerm">Mortgage Term</label>
           <div class="input-field">
-            <input id="mortgageTerm" type="number" name="mortgageTerm" class="input--numeric" min="0" required />
+            <input id="mortgageTerm" type="text" inputmode="numeric" name="mortgageTerm" class="input--numeric" autocomplete="off" required />
             <span class="input__unit">years</span>
           </div>
         </div>
         <div class="user-input stack--space-s">
           <label for="interestRate">Interest Rate</label>
           <div class="input-field">
-            <input id="interestRate" type="number" name="interestRate" class="input--numeric" min="0" required />
+            <input id="interestRate" type="text" inputmode="numeric" name="interestRate" class="input--numeric" autocomplete="off" required />
             <span class="input__unit">%</span>
           </div>
         </div>
@@ -89,6 +90,39 @@ export function renderMortgageCalcForm(htmlElement) {
     renderMortgageCalcResults(htmlElement);
   });
 
+  const inputNumeric = formSection.querySelectorAll('.input--numeric');
+
+  inputNumeric.forEach((input) => {
+    input.addEventListener('keyup', (event) => {
+      event.target.value = formatInputValue(event.target.value);
+    });
+  });
+
   htmlElement.innerHTML = '';
   htmlElement.append(formSection);
+}
+
+/**
+ * Apply thousand comma format removing invalid input character
+ * @param {string} value
+ * @returns {string}
+ */
+function formatInputValue(value) {
+  const hasDot = value.slice(0, -1).includes('.');
+
+  if (hasDot) {
+    if (value.at(-1) === '.') {
+      return value.slice(0, -1);
+    }
+    console.log(value.replaceAll('.', value.indexOf('.')));
+    return value;
+  }
+
+  if (value.at(-1) === '.') {
+    return value;
+  }
+
+  value = value.replaceAll(',', '');
+  value = isNaN(value) ? value.slice(0, -1) : value;
+  return formatNumber(value, 2);
 }

@@ -92,6 +92,7 @@
   border-color: var(--color-primary);
 }
 .mortgage-type-option label {
+  flex-grow: 1;
   cursor: pointer;
 }
 

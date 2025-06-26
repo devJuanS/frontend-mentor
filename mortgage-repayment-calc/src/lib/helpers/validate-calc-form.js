@@ -41,7 +41,7 @@ const validateOptionsGroup = (group) => {
  */
 const getInputValue = (elementId) => {
   const input = document.getElementById(elementId);
-  return Number(input.value);
+  return Number(input.value.replaceAll(',', '')); // remove commas due to the format applied to input value
 };
 
 /**
