@@ -94,7 +94,7 @@ export function renderMortgageCalcForm(htmlElement) {
 
   inputNumeric.forEach((input) => {
     input.addEventListener('keyup', (event) => {
-      event.target.value = formatInputValue(event.target.value);
+      event.target.value = formatInputValue(event.target.value, event.key);
     });
   });
 
@@ -105,24 +105,30 @@ export function renderMortgageCalcForm(htmlElement) {
 /**
  * Apply thousand comma format removing invalid input character
  * @param {string} value
+ * @param {string} key
  * @returns {string}
  */
-function formatInputValue(value) {
-  const hasDot = value.slice(0, -1).includes('.');
-
-  if (hasDot) {
-    if (value.at(-1) === '.') {
-      return value.slice(0, -1);
-    }
-    console.log(value.replaceAll('.', value.indexOf('.')));
-    return value;
-  }
-
-  if (value.at(-1) === '.') {
-    return value;
-  }
+function formatInputValue(value, key) {
+  const isNotValidKey = /[^0-9\.,]/.test(key); // true when different to number, comma and dot
+  if (/(\d\.0?)$/.test(value)) return value; // not modify value when it ends with '.' or '.0'
 
   value = value.replaceAll(',', '');
-  value = isNaN(value) ? value.slice(0, -1) : value;
+  if (isNotValidKey) {
+    value = value.replace(key, '');
+  }
+  if (key === '.') {
+    value = removeLastDot(value);
+  }
+
   return formatNumber(value, 2);
+}
+
+/**
+ * Remove last dot when this is duplicated in the string.
+ * @param {string} value representing a number.
+ * @returns {string} same value without the second dot.
+ */
+function removeLastDot(value) {
+  const regex = /(\.\d*)(\.)(\d*)/;
+  return value.replace(regex, (match, p1, p2, p3) => [p1, p3].join(''));
 }
