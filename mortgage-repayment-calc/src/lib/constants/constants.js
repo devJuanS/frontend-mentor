@@ -1,6 +1,6 @@
 export const REQUIRED_CLASS_STATUS = 'required-field';
 export const INSTRUCTIONS_IMAGE_INFO = {
-  src: '/src/assets/images/illustration-empty.svg',
+  src: '/images/illustration-empty.svg',
   alt: 'Accountable sheet with a calculator and cash money.',
 };
 export const EMPTY_INSTRUCTIONS = {
