@@ -12,7 +12,6 @@ This is a solution to the [Mortgage repayments calculator challenge on Frontend 
   - [Tasks on development process](#tasks-on-development-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -36,12 +35,14 @@ Users should be able to:
 
 - Mobile screenshot
 
-  <img src="./screenshot/screenshot-375px.png" height="800px">
+  <img src="./screenshot/screenshot-375px.png" width="30%">
 
 ### Links
 
 - Solution URL: [https://github.com/devJuanS/frontend-mentor/tree/main/mortgage-repayment-calc](https://github.com/devJuanS/frontend-mentor/tree/main/mortgage-repayment-calc)
 - Live Site URL: [https://mortgage-calc-fm.netlify.app/](https://mortgage-calc-fm.netlify.app/)
+
+[👆🏼Table of contents](#table-of-contents)
 
 ## My process
 
@@ -73,6 +74,8 @@ Users should be able to:
 - How to validate input values in the `keyup` event based on the entered key. This, together with the use of Regular Expressions, was possible to validate the user input values to perform the calculations properly.
 - How easy is to fit the styles to designs using relative measurements like `em` for spaces, font sizes and dimensions.
 
+[👆🏼Table of contents](#table-of-contents)
+
 ## Author
 
 - GitHub - [devJuanS](https://github.com/devJuanS)
@@ -83,3 +86,5 @@ Users should be able to:
 Thanks to [Alan Hartstein](https://www.nerdwallet.com/au/author/alan-hartstein) and [Georgia Rose](https://www.nerdwallet.com/au/author/georgia-rose) by their article [How to Calculate Mortgage Repayments](https://www.nerdwallet.com/au/home-loans/how-mortgage-repayments-work) because it helped me to clarify the mathematics to calculate the repayment fees. Furthermore, the application [Mortgage calculator](https://tools.moneyhelper.org.uk/en/mortgage-calculator) by [MoneyHelper](https://moneyhelper.org.uk/) was useful to understand better the meaning of the mortgage type and to compare the calculator results.
 
 Some solutions where achived thanks to the documentation on [MDN](https://developer.mozilla.org/en-US/), among them are the function `removeLastDot` and how to add opacity to a color when its value is defined in a variable.
+
+[👆🏼Table of contents](#table-of-contents)
