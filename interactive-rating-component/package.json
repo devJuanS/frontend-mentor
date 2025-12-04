@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["accessibiity", "frontend mentor", "vanilla", "rating", "component"],
+  "keywords": [
+    "accessibiity",
+    "frontend mentor",
+    "vanilla",
+    "rating",
+    "component"
+  ],
   "author": {
     "name": "Juan Sebastian",
     "url": "https://devjuans.github.io"
@@ -16,5 +22,8 @@
     "type": "git",
     "url": "https://github.com/devJuanS/frontend-mentor/"
   },
-  "packageManager": "pnpm@10.23.0"
+  "packageManager": "pnpm@10.23.0",
+  "devDependencies": {
+    "@biomejs/biome": "2.3.8"
+  }
 }
