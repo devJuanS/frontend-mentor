@@ -1,0 +1,19 @@
+@layer base {
+  :where(:root) {
+    --size-6xs: 0.125em;
+    --size-5xs: 0.25em;
+    --size-4xs: 0.375em;
+    --size-3xs: 0.5em;
+    --size-2xs: 0.625em;
+    --size-xs: 0.75em;
+    --size-s: 0.875em;
+    --size-m: 1em;
+    --size-l: 1.125em;
+    --size-xl: 1.25em;
+    --size-2xl: 1.5em;
+    --size-3xl: 1.75em;
+    --size-4xl: 2em;
+    --size-5xl: 2.5em;
+    --size-6xl: 3em;
+  }
+}
