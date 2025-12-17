@@ -1,0 +1,34 @@
+/**
+ * @section Colors
+ */
+ @layer theme {
+  :where(:root) {
+    --white: hsl(0, 100%, 100%);
+    --color-grey-500: hsl(217, 12%, 63%);
+    --color-grey-900: hsl(213, 19%, 18%);
+    --color-grey-950: hsl(216, 12%, 8%);
+    --color-primary: hsl(25, 97%, 53%);
+    --color-secondary: var(var(--white));
+
+    /* Page & Text  */
+		--color-background: rgb(32, 32, 32);
+		--color-text-normal: var(--white);
+		--color-text-muted: var(--color-grey-500);
+		--color-text-input: var(--white);
+		/* --color-text-link: var(--color-blue-50); */
+		/* --color-text-link-hover: var(--color-blue-40); */
+		--decoration-text-link: underline dotted;
+		--decoration-text-link-hover: underline;
+
+		/* State */
+		--color-checked: var(--color-secondary);
+		--color-checked-icon: var(--white);
+		/* --color-invalid: var(--color-red-50); */
+
+		/* Focus */
+		--focus-ring-color: var(--color-primary);
+		--focus-ring-style: solid;
+		--focus-ring-width: var(--size-6xs);
+		--focus-ring-offset: var(--size-6xs);
+  }
+ }
