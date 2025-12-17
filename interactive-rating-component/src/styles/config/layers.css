@@ -1,0 +1,25 @@
+/**
+ * Establish Cascade Layer order
+ *
+ * base:      The base CSS variables, configurations.
+ * theme:     Theme customizations (colors, fonts, sizes, etc.)
+ * core:      The custom styles for native elements and main components.
+ * extend:    Own components and customize existing ones.
+ * utilities: Utility classes for nudging and tweaking the UI.
+ * helpers:   Add your own utilities and customize existing ones.
+ * tokens:    Design tokens that define semantic colors.
+ * state:     State effects (:hover, :active, etc.).
+ * effects:   Add your own state effects and customize existing ones.
+ *
+ * Taken from Kelp UI by Chris Ferdinandi
+ */
+
+@layer base,
+	theme,
+	core,
+	extend,
+	utilities,
+	helpers,
+	tokens,
+	state,
+	effects;

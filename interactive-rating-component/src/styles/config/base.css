@@ -1,0 +1,10 @@
+/**
+ * @section Baseline styles
+ * Styles for native HTML elements
+ */
+ @layer core {
+
+  body {
+    font-family: var(--font-primary);
+  }
+ }
