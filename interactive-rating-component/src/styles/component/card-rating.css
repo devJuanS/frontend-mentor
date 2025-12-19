@@ -1,0 +1,49 @@
+/**
+ * @section Card Rating 
+ * Card component for a rating form
+ */
+@layer extend {
+  [class*="card"] {
+		--width: 24em;
+		margin-inline: auto;
+		max-width: var(--width);
+		width: 86vw;
+	}
+
+  .card-rating {
+    padding: var(--size-3xl);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey-900);
+    border-radius: var(--border-radius-l);
+
+    .icon {
+      margin-block-end: var(--size-3xl);
+    }
+
+    h3 {
+      margin-block-end: var(--size-4xs);
+      font-size: var(--size-4xl);
+    }
+
+    p {
+      color: var(--color-grey-500);
+    }
+
+    button {
+      --color: var(--color-grey-950);
+      --background-color: var(--color-primary);
+      --border-color: transparent;
+      --padding-block: var(--size-l);
+      --padding-inline: auto;
+      
+      padding-block: var(--padding-block);
+      padding-inline: var(--padding-inline);
+      font-size: var(--size-m);
+      font-weight: 700;
+      letter-spacing: var(--size-6xs);
+      border-radius: 2em;
+      /* TODO: add styles for hover and focus-visible states */
+    }
+  }
+}

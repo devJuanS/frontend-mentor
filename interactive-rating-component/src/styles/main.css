@@ -1,13 +1,21 @@
 /* Cascade Layers */
 @import './config/layers.css';
+
 /* Variables */
+@import './config/colors.css';
 @import './config/fonts.css';
+@import './config/sizes.css';
 
 /* Baselines */
-@import './config/base.css'
+@import './config/base.css';
 
 /* Layout */
+@import './layout/containers.css';
 
 /* Components */
+@import './component/avatar.css';
+@import './component/button.css';
+@import './component/card-rating.css';
 
 /* Utilities */
+@import './utilities/icons.css';

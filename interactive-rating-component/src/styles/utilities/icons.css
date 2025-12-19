@@ -1,0 +1,15 @@
+/**
+ * @section Custom icons styles
+ */
+@layer extend {
+  .icon {
+    --size: var(--size-6xl);
+    height: var(--size);
+    width: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(from var(--color-grey-500) h s l / 0.1);
+    border-radius: var(--border-radius-circle);
+  }
+}

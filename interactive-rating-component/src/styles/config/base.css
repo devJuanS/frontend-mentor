@@ -3,8 +3,71 @@
  * Styles for native HTML elements
  */
  @layer core {
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :where(:root) {
+    --background-color: var(--color-background);
+    --color: var(--color-text-normal);
+    color: var(--color);
+    background-color: var(--background-color);
+  }
 
   body {
     font-family: var(--font-primary);
+    line-height: var(--line-height-m);
+		margin: 0;
+		min-height: 100dvh;
+		overflow-x: clip;
   }
+
+  :where(p, form) {
+    margin-block-end: var(--space);
+    
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  /* Headings */
+  :where(h1, h2, h3, h4, h5, h6) {
+		margin-block: 0 var(--size-m);
+	}
+
+	:where(h1) {
+		margin-block-start: var(--size-4xs);
+	}
+
+	:where(h2) {
+		margin-block-start: var(--size-5xl);
+	}
  }
+
+ /**
+ * @section Baseline state styles
+ * Styles for states of native HTML elements
+ */
+ @layer kelp.state {
+	/**
+	 * Focus styles
+	 */
+	:is(
+			button,
+			[href],
+			input,
+			select,
+			textarea,
+			summary,
+			[tabindex]
+		):focus-visible {
+		outline-color: var(--focus-ring-color);
+		outline-style: var(--focus-ring-style);
+		outline-width: var(--focus-ring-width);
+		outline-offset: var(--focus-ring-offset);
+	}
+}

@@ -11,7 +11,7 @@
     --color-secondary: var(var(--white));
 
     /* Page & Text  */
-		--color-background: rgb(32, 32, 32);
+		--color-background: var(--color-grey-950);  /* rgb(32, 32, 32); */
 		--color-text-normal: var(--white);
 		--color-text-muted: var(--color-grey-500);
 		--color-text-input: var(--white);
